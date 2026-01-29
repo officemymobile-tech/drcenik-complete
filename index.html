@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dr. Fadime Cenik - Fachärztin für Physikalische Medizin und allgemeine Rehabilitation in Wien. Spezialisiert auf Schmerztherapie, Stoßwellentherapie und moderne Rehabilitationsverfahren.">
-    <meta name="keywords" content="Physikalische Medizin Wien, Rehabilitation Wien, Dr. Fadime Cenik, Stoßwellentherapie, Schmerztherapie, Massage Wien">
-    <meta name="author" content="Dr. Fadime Cenik">
+    <meta name="description" content="Dr. Fadime Cenik - Fachärztin für Physikalische Medizin und Rehabilitation in Wien. Eine neue Art der medizinischen Erfahrung.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#1a1a2e">
     <title>Dr. Fadime Cenik - Physikalische Medizin & Rehabilitation Wien</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,393 +19,281 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚕️</text></svg>">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <span class="logo-text">Dr. Fadime Cenik</span>
-            </a>
-            
-            <nav class="nav" id="nav">
-                <ul class="nav-list">
-                    <li class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle" data-i18n="nav.therapies">Therapieangebot</button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#services" data-i18n="services.physicalMedicine">Physikalische Medizin</a></li>
-                            <li><a href="#services" data-i18n="services.shockwave">Stoßwellentherapie</a></li>
-                            <li><a href="#services" data-i18n="services.massage">Massage</a></li>
-                            <li><a href="#services" data-i18n="services.rehabilitation">Rehabilitation</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="#news" class="nav-link" data-i18n="nav.news">Wissen & News</a></li>
-                    <li class="nav-item"><a href="#faq" class="nav-link" data-i18n="nav.faq">Häufige Fragen</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link" data-i18n="nav.about">Über uns</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-actions">
-                <a href="tel:+4317692991" class="phone-link">
-                    <span class="phone-icon">📞</span>
-                    <span>01 / 769 29 91</span>
-                </a>
-                
-                <div class="lang-switcher">
-                    <button class="lang-btn active" data-lang="de">DE</button>
-                    <button class="lang-btn" data-lang="tr">TR</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-                
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü öffnen">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <!-- Breathing Background -->
+    <div class="breathing-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="hero-badge" data-i18n="hero.badge">IHRE GESUNDHEIT IM MITTELPUNKT</span>
-                <h1 class="hero-title" data-i18n="hero.title">Physikalische Medizin & Rehabilitation Wien</h1>
-                <p class="hero-description" data-i18n="hero.description">Spezialisierte Therapien für Bewegungsapparat-Störungen, Schmerzbehandlung und funktionelle Wiederherstellung mit modernsten Technologien.</p>
+    <!-- Entry Experience -->
+    <section id="entry" class="entry-section active">
+        <div class="entry-container">
+            <div class="entry-content">
+                <h1 class="typing-text" data-i18n="entry.greeting"></h1>
+                <p class="entry-subtitle fade-in-delayed" data-i18n="entry.subtitle"></p>
                 
-                <blockquote class="hero-quote">
-                    <p data-i18n="hero.quote">„Der Mensch muss stets im Mittelpunkt aller medizinischen, ökonomischen und fachlichen Bemühungen stehen."</p>
-                </blockquote>
-                
-                <div class="hero-buttons">
-                    <a href="tel:+4317692991" class="btn btn-primary">
-                        <span class="btn-icon">📞</span>
-                        <span data-i18n="hero.callNow">Jetzt anrufen</span>
-                    </a>
-                    <a href="mailto:office@drcenik.at" class="btn btn-secondary">
-                        <span class="btn-icon">✉️</span>
-                        <span data-i18n="hero.email">Email schreiben</span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hero-card">
-                <div class="doctor-card">
-                    <span class="doctor-title">Dr. med. univ.</span>
-                    <h2 class="doctor-name">Fadime Cenik</h2>
-                    <p class="doctor-specialty" data-i18n="hero.specialty">Fachärztin für Physikalische Medizin und allgemeine Rehabilitation</p>
-                    <p class="doctor-description" data-i18n="hero.doctorDescription">Spezialisiert auf physikalische Medizin und Rehabilitation mit modernsten Technologien.</p>
-                    <div class="doctor-badge">
-                        <span class="badge-icon">✓</span>
-                        <span data-i18n="hero.expertise">Fachkompetenz</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="services.title">Unser Therapieangebot</h2>
-                <p class="section-subtitle" data-i18n="services.subtitle">Spezialisierte Behandlungen für optimale Gesundheit und Funktionalität</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏥</div>
-                    <h3 class="service-title" data-i18n="services.physicalMedicine">Physikalische Medizin</h3>
-                    <p class="service-description" data-i18n="services.physicalMedicineDesc">Ganzheitliche Diagnostik und Therapie von Erkrankungen des Bewegungsapparates mit modernsten Methoden.</p>
-                    <a href="#contact" class="service-link" data-i18n="services.learnMore">Mehr erfahren →</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3 class="service-title" data-i18n="services.shockwave">Stoßwellentherapie</h3>
-                    <p class="service-description" data-i18n="services.shockwaveDesc">Nicht-invasive Behandlung von chronischen Schmerzen und Verkalkungen mit fokussierten Stoßwellen.</p>
-                    <a href="#contact" class="service-link" data-i18n="services.learnMore">Mehr erfahren →</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">💆</div>
-                    <h3 class="service-title" data-i18n="services.massage">Massage & Manuelle Therapie</h3>
-                    <p class="service-description" data-i18n="services.massageDesc">Professionelle Massagen und manuelle Techniken zur Linderung von Verspannungen und Schmerzen.</p>
-                    <a href="#contact" class="service-link" data-i18n="services.learnMore">Mehr erfahren →</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🔄</div>
-                    <h3 class="service-title" data-i18n="services.rehabilitation">Rehabilitation</h3>
-                    <p class="service-description" data-i18n="services.rehabilitationDesc">Individuelle Rehabilitationsprogramme nach Operationen, Unfällen oder bei chronischen Erkrankungen.</p>
-                    <a href="#contact" class="service-link" data-i18n="services.learnMore">Mehr erfahren →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section class="news" id="news">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="news.title">Aktuelle Medizinische Erkenntnisse 2026</h2>
-                <p class="section-subtitle" data-i18n="news.subtitle">Neueste Entwicklungen in der Rehabilitationsmedizin und Gesundheitsforschung</p>
-            </div>
-            
-            <div class="news-grid">
-                <article class="news-card">
-                    <div class="news-badge" data-i18n="news.innovation">INNOVATION</div>
-                    <div class="news-icon">🤖</div>
-                    <h3 class="news-title" data-i18n="news.article1Title">Künstliche Intelligenz in der Physiotherapie</h3>
-                    <p class="news-excerpt" data-i18n="news.article1Excerpt">AI-gestützte Bewegungsanalyse revolutioniert die Physiotherapie durch objektive Datenerfassung und personalisierte Behandlungspläne.</p>
-                    <div class="news-meta">
-                        <span data-i18n="news.readTime">5 Min. Lesedauer</span>
-                        <span>Jan 2026</span>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="news-badge news-badge-therapy" data-i18n="news.painTherapy">SCHMERZTHERAPIE</div>
-                    <div class="news-icon">💊</div>
-                    <h3 class="news-title" data-i18n="news.article2Title">Neue Ansätze in der Schmerzbehandlung</h3>
-                    <p class="news-excerpt" data-i18n="news.article2Excerpt">Moderne multimodale Schmerztherapie kombiniert verschiedene Behandlungsmethoden für optimale Ergebnisse.</p>
-                    <div class="news-meta">
-                        <span data-i18n="news.readTime">6 Min. Lesedauer</span>
-                        <span>Jan 2026</span>
-                    </div>
-                </article>
-                
-                <article class="news-card">
-                    <div class="news-badge news-badge-rehab" data-i18n="news.rehabilitation">REHABILITATION</div>
-                    <div class="news-icon">🧠</div>
-                    <h3 class="news-title" data-i18n="news.article3Title">Neurorehabilitation: Ganzheitliche Behandlung</h3>
-                    <p class="news-excerpt" data-i18n="news.article3Excerpt">Fortschrittliche Neurorehabilitation adressiert neuropathische Schmerzen durch interdisziplinäre Ansätze.</p>
-                    <div class="news-meta">
-                        <span data-i18n="news.readTime">7 Min. Lesedauer</span>
-                        <span>Jan 2026</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vouchers Section -->
-    <section class="vouchers" id="vouchers">
-        <div class="container">
-            <div class="vouchers-content">
-                <div class="vouchers-icon">🎁</div>
-                <div class="vouchers-text">
-                    <h2 class="vouchers-title" data-i18n="vouchers.title">Das perfekte Geschenk für Ihre Lieben</h2>
-                    <p class="vouchers-description" data-i18n="vouchers.description">Wenn Sie Ihre Lieben beschenken wollen, können Sie bei uns gerne auch Gutscheine erwerben. Wählen Sie aus verschiedenen Paketen und schenken Sie Gesundheit und Wohlbefinden.</p>
-                    <ul class="vouchers-list">
-                        <li data-i18n="vouchers.benefit1">✓ Flexible Pakete für jeden Bedarf</li>
-                        <li data-i18n="vouchers.benefit2">✓ Gültig für alle Therapien</li>
-                        <li data-i18n="vouchers.benefit3">✓ Perfekt als Geschenk</li>
-                    </ul>
-                    <a href="mailto:office@drcenik.at?subject=Gutschein%20Anfrage" class="btn btn-gold">
-                        <span>📧</span>
-                        <span data-i18n="vouchers.request">Gutschein anfragen</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hours Section -->
-    <section class="hours" id="hours">
-        <div class="container">
-            <div class="hours-content">
-                <div class="hours-card">
-                    <h3 class="hours-title">
-                        <span class="hours-icon">🏥</span>
-                        <span data-i18n="hours.title">Ordinationszeiten</span>
-                    </h3>
-                    <div class="hours-table">
-                        <div class="hours-row">
-                            <span class="hours-day" data-i18n="hours.monday">Mo</span>
-                            <span class="hours-time">07:00 - 19:00</span>
+                <div class="choice-cards">
+                    <div class="choice-card" data-intent="urgent">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
                         </div>
-                        <div class="hours-row">
-                            <span class="hours-day" data-i18n="hours.tueThuWed">Di, Mi, Do</span>
-                            <span class="hours-time">06:30 - 19:00</span>
-                        </div>
-                        <div class="hours-row">
-                            <span class="hours-day" data-i18n="hours.friday">Fr</span>
-                            <span class="hours-time">06:30 - 17:00</span>
-                        </div>
-                    </div>
-                    <p class="hours-note" data-i18n="hours.note">ℹ️ Termine zur Erstuntersuchung nach telefonischer Vereinbarung</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta" id="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title" data-i18n="cta.title">Bereit für Ihre Gesundheit?</h2>
-                <p class="cta-description" data-i18n="cta.description">Vereinbaren Sie noch heute einen Termin mit Dr. Fadime Cenik und erleben Sie hochwertige medizinische Versorgung in Wien.</p>
-                <div class="cta-features">
-                    <div class="cta-feature">
-                        <span class="cta-feature-icon">✓</span>
-                        <span data-i18n="cta.feature1">Fachärztliche Kompetenz</span>
-                    </div>
-                    <div class="cta-feature">
-                        <span class="cta-feature-icon">✓</span>
-                        <span data-i18n="cta.feature2">Moderne Technologien</span>
-                    </div>
-                    <div class="cta-feature">
-                        <span class="cta-feature-icon">✓</span>
-                        <span data-i18n="cta.feature3">Patientenzentrierte Betreuung</span>
-                    </div>
-                </div>
-                <div class="cta-buttons">
-                    <a href="tel:+4317692991" class="btn btn-primary btn-large">
-                        <span>📞</span>
-                        <span data-i18n="cta.bookAppointment">Termin vereinbaren</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="contact.title">Kontaktieren Sie uns</h2>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3 class="contact-subtitle" data-i18n="contact.infoTitle">Kontaktinformationen</h3>
-                    
-                    <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <div class="contact-details">
-                            <span class="contact-label" data-i18n="contact.phone">Telefon:</span>
-                            <a href="tel:+4317692991" class="contact-value">01 / 769 29 91</a>
-                        </div>
+                        <h3 data-i18n="entry.choice1.title"></h3>
+                        <p data-i18n="entry.choice1.desc"></p>
                     </div>
                     
-                    <div class="contact-item">
-                        <span class="contact-icon">✉️</span>
-                        <div class="contact-details">
-                            <span class="contact-label" data-i18n="contact.email">E-Mail:</span>
-                            <a href="mailto:office@drcenik.at" class="contact-value">office@drcenik.at</a>
+                    <div class="choice-card" data-intent="curious">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
                         </div>
+                        <h3 data-i18n="entry.choice2.title"></h3>
+                        <p data-i18n="entry.choice2.desc"></p>
                     </div>
                     
-                    <div class="contact-item">
-                        <span class="contact-icon">📍</span>
-                        <div class="contact-details">
-                            <span class="contact-label" data-i18n="contact.address">Adresse:</span>
-                            <span class="contact-value">Kaiser-Ebersdorfer-Straße 328, 1110 Wien</span>
+                    <div class="choice-card" data-intent="passive">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="entry.choice3.title"></h3>
+                        <p data-i18n="entry.choice3.desc"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Experience (Hidden until choice made) -->
+    <main id="experience" class="experience-section">
+        
+        <!-- Trust Module -->
+        <section id="trust-module" class="content-module trust-module">
+            <div class="module-container">
+                <div class="module-header">
+                    <span class="module-label" data-i18n="trust.label"></span>
+                    <h2 class="module-title" data-i18n="trust.title"></h2>
+                </div>
+                <div class="module-content">
+                    <p class="module-text" data-i18n="trust.text"></p>
+                    <div class="trust-points">
+                        <div class="trust-point">
+                            <div class="trust-icon">✓</div>
+                            <span data-i18n="trust.point1"></span>
+                        </div>
+                        <div class="trust-point">
+                            <div class="trust-icon">✓</div>
+                            <span data-i18n="trust.point2"></span>
+                        </div>
+                        <div class="trust-point">
+                            <div class="trust-icon">✓</div>
+                            <span data-i18n="trust.point3"></span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-transport">
-                    <h3 class="contact-subtitle" data-i18n="contact.transportTitle">Öffentliche Verkehrsmittel</h3>
-                    
-                    <div class="transport-item">
-                        <span class="transport-label">BUS:</span>
-                        <span class="transport-value">71B, 73A, 76B, 79A, 79B</span>
-                    </div>
-                    
-                    <div class="transport-item">
-                        <span class="transport-label">TRAM:</span>
-                        <span class="transport-value">11, 71</span>
-                    </div>
-                    
-                    <div class="transport-item">
-                        <span class="transport-label" data-i18n="contact.station">Station:</span>
-                        <span class="transport-value">Kaiserebersdorf, Zinnergasse</span>
-                    </div>
-                </div>
-                
-                <div class="contact-map">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.0!2d16.4!3d48.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA5JzAwLjAiTiAxNsKwMjQnMDAuMCJF!5e0!3m2!1sde!2sat!4v1234567890"
-                        width="100%" 
-                        height="300" 
-                        style="border:0; border-radius: 12px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="footer-logo">Dr. Fadime Cenik</a>
-                    <p class="footer-tagline" data-i18n="footer.tagline">Physikalische Medizin & Rehabilitation Wien</p>
-                    <div class="footer-contact">
-                        <a href="tel:+4317692991">📞 01 / 769 29 91</a>
-                        <a href="mailto:office@drcenik.at">📧 office@drcenik.at</a>
+        <!-- Expertise Module -->
+        <section id="expertise-module" class="content-module expertise-module">
+            <div class="module-container">
+                <div class="module-header">
+                    <span class="module-label" data-i18n="expertise.label"></span>
+                    <h2 class="module-title" data-i18n="expertise.title"></h2>
+                </div>
+                <div class="module-content">
+                    <div class="doctor-profile">
+                        <div class="doctor-image">
+                            <div class="image-placeholder">
+                                <span>Dr. F. Cenik</span>
+                            </div>
+                        </div>
+                        <div class="doctor-info">
+                            <h3 data-i18n="expertise.doctor.name"></h3>
+                            <p class="doctor-title" data-i18n="expertise.doctor.title"></p>
+                            <p class="doctor-desc" data-i18n="expertise.doctor.desc"></p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h4 class="footer-title" data-i18n="footer.quickLinks">Schnellzugriff</h4>
-                    <ul>
-                        <li><a href="#hero" data-i18n="footer.home">Startseite</a></li>
-                        <li><a href="#services" data-i18n="nav.therapies">Therapieangebot</a></li>
-                        <li><a href="#news" data-i18n="nav.news">Wissen & News</a></li>
-                        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-legal">
-                    <h4 class="footer-title" data-i18n="footer.legal">Rechtliches</h4>
-                    <ul>
-                        <li><a href="pages/impressum.html" data-i18n="footer.imprint">Impressum</a></li>
-                        <li><a href="pages/datenschutz.html" data-i18n="footer.privacy">Datenschutzerklärung</a></li>
-                        <li><a href="pages/agb.html" data-i18n="footer.terms">AGB</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-lang">
-                    <h4 class="footer-title" data-i18n="footer.language">Sprache</h4>
-                    <div class="footer-lang-buttons">
-                        <button class="footer-lang-btn active" data-lang="de">🇩🇪 Deutsch</button>
-                        <button class="footer-lang-btn" data-lang="tr">🇹🇷 Türkçe</button>
-                        <button class="footer-lang-btn" data-lang="en">🇬🇧 English</button>
+                    
+                    <div class="expertise-areas">
+                        <div class="expertise-card" data-expand="true">
+                            <div class="expertise-header">
+                                <h4 data-i18n="expertise.area1.title"></h4>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="expertise-body">
+                                <p data-i18n="expertise.area1.desc"></p>
+                            </div>
+                        </div>
+                        <div class="expertise-card" data-expand="true">
+                            <div class="expertise-header">
+                                <h4 data-i18n="expertise.area2.title"></h4>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="expertise-body">
+                                <p data-i18n="expertise.area2.desc"></p>
+                            </div>
+                        </div>
+                        <div class="expertise-card" data-expand="true">
+                            <div class="expertise-header">
+                                <h4 data-i18n="expertise.area3.title"></h4>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="expertise-body">
+                                <p data-i18n="expertise.area3.desc"></p>
+                            </div>
+                        </div>
+                        <div class="expertise-card" data-expand="true">
+                            <div class="expertise-header">
+                                <h4 data-i18n="expertise.area4.title"></h4>
+                                <span class="expand-icon">+</span>
+                            </div>
+                            <div class="expertise-body">
+                                <p data-i18n="expertise.area4.desc"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2026 Dr. Fadime Cenik. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></p>
-            </div>
-        </div>
-    </footer>
+        </section>
 
-    <!-- Cookie Banner -->
-    <div class="cookie-banner" id="cookie-banner">
-        <div class="cookie-content">
-            <div class="cookie-icon">🍪</div>
-            <div class="cookie-text">
-                <h4 data-i18n="cookie.title">Cookie-Einstellungen</h4>
-                <p data-i18n="cookie.description">Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und unsere Website zu optimieren. Bitte wählen Sie Ihre Vorlieben aus.</p>
+        <!-- Emotional Safety Module -->
+        <section id="safety-module" class="content-module safety-module">
+            <div class="module-container">
+                <div class="module-header">
+                    <span class="module-label" data-i18n="safety.label"></span>
+                    <h2 class="module-title" data-i18n="safety.title"></h2>
+                </div>
+                <div class="module-content">
+                    <blockquote class="safety-quote">
+                        <p data-i18n="safety.quote"></p>
+                        <cite data-i18n="safety.cite"></cite>
+                    </blockquote>
+                    <div class="safety-assurance">
+                        <p data-i18n="safety.assurance"></p>
+                    </div>
+                </div>
             </div>
-            <div class="cookie-buttons">
-                <button class="btn btn-outline" id="cookie-reject" data-i18n="cookie.reject">Ablehnen</button>
-                <button class="btn btn-primary" id="cookie-accept" data-i18n="cookie.accept">Alle akzeptieren</button>
+        </section>
+
+        <!-- Action Module -->
+        <section id="action-module" class="content-module action-module">
+            <div class="module-container">
+                <div class="module-header">
+                    <h2 class="module-title action-title" data-i18n="action.title"></h2>
+                </div>
+                <div class="module-content">
+                    <p class="action-text" data-i18n="action.text"></p>
+                    
+                    <div class="action-options">
+                        <a href="tel:+4317692991" class="action-btn primary">
+                            <span class="btn-icon">📞</span>
+                            <span data-i18n="action.call"></span>
+                        </a>
+                        <a href="mailto:office@drcenik.at" class="action-btn secondary">
+                            <span class="btn-icon">✉️</span>
+                            <span data-i18n="action.email"></span>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>Kaiser-Ebersdorfer-Straße 328, 1110 Wien</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🕐</span>
+                            <span data-i18n="action.hours"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- AI Guide Orb -->
+    <div id="ai-orb" class="ai-orb">
+        <div class="orb-pulse"></div>
+        <div class="orb-core">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+        </div>
+        <div class="orb-menu">
+            <button class="orb-option" data-action="guide">
+                <span data-i18n="orb.guide"></span>
+            </button>
+            <button class="orb-option" data-action="question">
+                <span data-i18n="orb.question"></span>
+            </button>
+            <button class="orb-option" data-action="simplify">
+                <span data-i18n="orb.simplify"></span>
+            </button>
+            <button class="orb-option" data-action="language">
+                <span data-i18n="orb.language"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Language Selector Modal -->
+    <div id="language-modal" class="modal language-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <h3 data-i18n="language.title"></h3>
+            <div class="language-options">
+                <button class="lang-btn" data-lang="de">Deutsch</button>
+                <button class="lang-btn" data-lang="tr">Türkçe</button>
+                <button class="lang-btn" data-lang="en">English</button>
             </div>
         </div>
     </div>
 
+    <!-- Question Modal -->
+    <div id="question-modal" class="modal question-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 data-i18n="question.title"></h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4 data-i18n="question.q1.title"></h4>
+                    <p data-i18n="question.q1.answer"></p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="question.q2.title"></h4>
+                    <p data-i18n="question.q2.answer"></p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="question.q3.title"></h4>
+                    <p data-i18n="question.q3.answer"></p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="question.q4.title"></h4>
+                    <p data-i18n="question.q4.answer"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Minimal) -->
+    <footer class="minimal-footer">
+        <div class="footer-content">
+            <span>© 2026 Dr. Fadime Cenik</span>
+            <div class="footer-links">
+                <a href="pages/impressum.html" data-i18n="footer.imprint"></a>
+                <a href="pages/datenschutz.html" data-i18n="footer.privacy"></a>
+            </div>
+        </div>
+    </footer>
+
     <!-- Scripts -->
-    <script src="js/translations.js"></script>
+    <script src="ai/ux-engine.js"></script>
+    <script src="ui/motion.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

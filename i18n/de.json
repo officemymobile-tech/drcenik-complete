@@ -1,0 +1,97 @@
+{
+    "entry": {
+        "greeting": "Wie kann ich Ihnen helfen?",
+        "subtitle": "Dr. Fadime Cenik – Physikalische Medizin & Rehabilitation Wien",
+        "choice1": {
+            "title": "Ich suche eine Behandlung",
+            "desc": "Direkte Hilfe bei akuten Beschwerden oder chronischen Schmerzen"
+        },
+        "choice2": {
+            "title": "Ich möchte meine Optionen verstehen",
+            "desc": "Informationen über Therapiemöglichkeiten und Behandlungsansätze"
+        },
+        "choice3": {
+            "title": "Ich schaue mich nur um",
+            "desc": "Lernen Sie uns und unsere Praxis in Ruhe kennen"
+        }
+    },
+    "trust": {
+        "label": "Vertrauen",
+        "title": "Sie sind in guten Händen",
+        "text": "Wir verstehen, dass der erste Schritt oft der schwierigste ist. Jeder Patient bringt seine eigene Geschichte mit – und wir hören zu, bevor wir handeln.",
+        "point1": "Über 15 Jahre Erfahrung in der Rehabilitationsmedizin",
+        "point2": "Individuelle Behandlungspläne für jeden Patienten",
+        "point3": "Modernste Diagnostik und Therapieverfahren"
+    },
+    "expertise": {
+        "label": "Fachkompetenz",
+        "title": "Spezialisierte Expertise",
+        "doctor": {
+            "name": "Dr. med. univ. Fadime Cenik",
+            "title": "Fachärztin für Physikalische Medizin und allgemeine Rehabilitation",
+            "desc": "Mit einem ganzheitlichen Ansatz verbinde ich modernste medizinische Methoden mit individueller Patientenbetreuung."
+        },
+        "area1": {
+            "title": "Physikalische Medizin",
+            "desc": "Ganzheitliche Diagnostik und Therapie von Erkrankungen des Bewegungsapparates. Wir behandeln die Ursache, nicht nur die Symptome."
+        },
+        "area2": {
+            "title": "Stoßwellentherapie",
+            "desc": "Nicht-invasive Behandlung von chronischen Schmerzen, Verkalkungen und Sehnenerkrankungen mit fokussierten Stoßwellen."
+        },
+        "area3": {
+            "title": "Manuelle Therapie",
+            "desc": "Professionelle Massagen und manuelle Techniken zur Linderung von Verspannungen, Blockaden und Schmerzen."
+        },
+        "area4": {
+            "title": "Rehabilitation",
+            "desc": "Individuelle Rehabilitationsprogramme nach Operationen, Unfällen oder bei chronischen Erkrankungen."
+        }
+    },
+    "safety": {
+        "label": "Ihr Wohlbefinden",
+        "title": "Der Mensch im Mittelpunkt",
+        "quote": "Der Mensch muss stets im Mittelpunkt aller medizinischen, ökonomischen und fachlichen Bemühungen stehen.",
+        "cite": "— Dr. Fadime Cenik",
+        "assurance": "Bei uns werden Sie nicht als Fall behandelt, sondern als Mensch. Ihre Gesundheit und Ihr Wohlbefinden stehen an erster Stelle."
+    },
+    "action": {
+        "title": "Sprechen wir über Sie.",
+        "text": "Vereinbaren Sie einen Termin und lassen Sie uns gemeinsam den besten Weg für Ihre Gesundheit finden.",
+        "call": "Jetzt anrufen",
+        "email": "E-Mail schreiben",
+        "hours": "Mo-Fr: 06:30 - 19:00 Uhr"
+    },
+    "orb": {
+        "guide": "Führen Sie mich",
+        "question": "Eine Frage stellen",
+        "simplify": "Einfach erklären",
+        "language": "Sprache ändern"
+    },
+    "language": {
+        "title": "Sprache wählen"
+    },
+    "question": {
+        "title": "Häufige Fragen",
+        "q1": {
+            "title": "Brauche ich eine Überweisung?",
+            "answer": "Für einen Ersttermin ist keine Überweisung erforderlich. Sie können uns direkt kontaktieren."
+        },
+        "q2": {
+            "title": "Welche Kassen werden akzeptiert?",
+            "answer": "Wir sind eine Wahlarztpraxis. Sie erhalten eine Rechnung zur Einreichung bei Ihrer Krankenkasse."
+        },
+        "q3": {
+            "title": "Wie lange dauert eine Behandlung?",
+            "answer": "Die Erstuntersuchung dauert etwa 30-45 Minuten. Folgebehandlungen variieren je nach Therapie."
+        },
+        "q4": {
+            "title": "Wo finde ich die Praxis?",
+            "answer": "Kaiser-Ebersdorfer-Straße 328, 1110 Wien. Erreichbar mit Bus (71B, 73A, 76B) und Tram (11, 71)."
+        }
+    },
+    "footer": {
+        "imprint": "Impressum",
+        "privacy": "Datenschutz"
+    }
+}

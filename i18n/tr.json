@@ -1,0 +1,97 @@
+{
+    "entry": {
+        "greeting": "Size nasıl yardımcı olabilirim?",
+        "subtitle": "Dr. Fadime Cenik – Fiziksel Tıp ve Rehabilitasyon, Viyana",
+        "choice1": {
+            "title": "Tedavi arıyorum",
+            "desc": "Akut şikayetler veya kronik ağrılar için doğrudan yardım"
+        },
+        "choice2": {
+            "title": "Seçeneklerimi anlamak istiyorum",
+            "desc": "Tedavi yöntemleri ve yaklaşımlar hakkında bilgi"
+        },
+        "choice3": {
+            "title": "Sadece göz atıyorum",
+            "desc": "Bizi ve kliniğimizi rahatça tanıyın"
+        }
+    },
+    "trust": {
+        "label": "Güven",
+        "title": "Emin ellerde olduğunuzu bilin",
+        "text": "İlk adımın genellikle en zor adım olduğunu biliyoruz. Her hasta kendi hikayesini getirir – ve biz harekete geçmeden önce dinleriz. Sizin için buradayız.",
+        "point1": "Rehabilitasyon tıbbında 15 yılı aşkın deneyim",
+        "point2": "Her hasta için kişiselleştirilmiş tedavi planları",
+        "point3": "En modern tanı ve tedavi yöntemleri"
+    },
+    "expertise": {
+        "label": "Uzmanlık",
+        "title": "Uzman Bakım",
+        "doctor": {
+            "name": "Dr. med. univ. Fadime Cenik",
+            "title": "Fiziksel Tıp ve Genel Rehabilitasyon Uzmanı",
+            "desc": "Bütüncül bir yaklaşımla, en modern tıbbi yöntemleri bireysel hasta bakımıyla birleştiriyorum. Sağlığınız benim önceliğim."
+        },
+        "area1": {
+            "title": "Fiziksel Tıp",
+            "desc": "Hareket sistemi hastalıklarının kapsamlı tanı ve tedavisi. Sadece belirtileri değil, nedeni tedavi ediyoruz."
+        },
+        "area2": {
+            "title": "Şok Dalga Terapisi",
+            "desc": "Kronik ağrılar, kireçlenmeler ve tendon hastalıkları için non-invaziv tedavi yöntemi."
+        },
+        "area3": {
+            "title": "Manuel Terapi",
+            "desc": "Gerginliklerin, blokajların ve ağrıların giderilmesi için profesyonel masaj ve manuel teknikler."
+        },
+        "area4": {
+            "title": "Rehabilitasyon",
+            "desc": "Ameliyat, kaza sonrası veya kronik hastalıklar için bireysel rehabilitasyon programları."
+        }
+    },
+    "safety": {
+        "label": "Sağlığınız",
+        "title": "İnsan Her Şeyin Merkezinde",
+        "quote": "İnsan, tüm tıbbi, ekonomik ve mesleki çabaların merkezinde olmalıdır.",
+        "cite": "— Dr. Fadime Cenik",
+        "assurance": "Bizde bir vaka olarak değil, bir insan olarak tedavi edilirsiniz. Sağlığınız ve iyiliğiniz her şeyden önce gelir. Sizin için buradayız."
+    },
+    "action": {
+        "title": "Sizinle tanışmak isteriz.",
+        "text": "Bir randevu alın ve sağlığınız için en iyi yolu birlikte bulalım. İlk adımı atmaktan çekinmeyin.",
+        "call": "Hemen arayın",
+        "email": "E-posta gönderin",
+        "hours": "Pzt-Cum: 06:30 - 19:00"
+    },
+    "orb": {
+        "guide": "Bana rehberlik et",
+        "question": "Soru sor",
+        "simplify": "Basitçe anlat",
+        "language": "Dil değiştir"
+    },
+    "language": {
+        "title": "Dil seçin"
+    },
+    "question": {
+        "title": "Sık Sorulan Sorular",
+        "q1": {
+            "title": "Sevk gerekli mi?",
+            "answer": "İlk randevu için sevk gerekmez. Bize doğrudan ulaşabilirsiniz."
+        },
+        "q2": {
+            "title": "Hangi sigortalar kabul ediliyor?",
+            "answer": "Özel muayenehane olarak çalışıyoruz. Sigortanıza sunmak üzere fatura alırsınız."
+        },
+        "q3": {
+            "title": "Tedavi ne kadar sürer?",
+            "answer": "İlk muayene yaklaşık 30-45 dakika sürer. Takip tedavileri terapiye göre değişir."
+        },
+        "q4": {
+            "title": "Kliniği nasıl bulurum?",
+            "answer": "Kaiser-Ebersdorfer-Straße 328, 1110 Viyana. Otobüs (71B, 73A, 76B) ve tramvay (11, 71) ile ulaşılabilir."
+        }
+    },
+    "footer": {
+        "imprint": "Künye",
+        "privacy": "Gizlilik"
+    }
+}
