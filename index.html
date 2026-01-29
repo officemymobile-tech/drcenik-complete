@@ -3,268 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dr. Fadime Cenik - Physikalische Medizin & Rehabilitation Wien">
-    <meta name="keywords" content="Physikalische Medizin, Rehabilitation, Wien, Dr. Cenik">
-    <meta name="author" content="Dr. Fadime Cenik">
-    <title>Dr. Fadime Cenik - Physikalische Medizin & Rehabilitation</title>
+    <meta name="description" content="Dr. Fadime Cenik - Physikalische Medizin & Rehabilitation Wien - Coming Soon">
+    <title>Dr. Fadime Cenik - Coming Soon</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .divider {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            margin: 2rem auto;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #D4AF37, #FFD700, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .subtitle-en {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: #D4AF37;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #FFD700;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #D4AF37;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #D4AF37;
+            color: #1a1a2e;
+            transform: translateY(-3px);
+        }
+
+        .background-decoration {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .decoration-1 {
+            top: -100px;
+            right: -100px;
+        }
+
+        .decoration-2 {
+            bottom: -100px;
+            left: -100px;
+        }
+
+        .language-note {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .language-note p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            .subtitle-en {
+                font-size: 1rem;
+            }
+            .description {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="root">
-        <!-- Navigation -->
-        <nav class="navbar">
-            <div class="navbar-container">
-                <div class="navbar-logo">
-                    <span>Dr. Fadime Cenik</span>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle" id="therapies-btn">Therapieangebot</button>
-                        <div class="dropdown-menu">
-                            <a href="#therapies">Fachkompetenz</a>
-                            <a href="#therapies">Akademisch</a>
-                            <a href="#therapies">Ordination in Wien</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a href="#" class="nav-link">R-Force</a></li>
-                    <li class="nav-item"><a href="#news" class="nav-link">Wissen & News</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Häufige Fragen</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Über uns</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Kontakt</a></li>
-                </ul>
-                <div class="navbar-right">
-                    <a href="tel:+43176929991" class="nav-phone">☎ 01 / 769 29 91</a>
-                    <div class="language-selector">
-                        <button class="lang-btn active" data-lang="de">DE</button>
-                        <button class="lang-btn" data-lang="tr">TR</button>
-                        <button class="lang-btn" data-lang="en">EN</button>
-                    </div>
-                </div>
+    <div class="background-decoration decoration-1"></div>
+    <div class="background-decoration decoration-2"></div>
+    
+    <div class="container">
+        <div class="logo">Dr. Fadime Cenik</div>
+        
+        <div class="divider"></div>
+        
+        <h1>Coming Soon</h1>
+        
+        <p class="subtitle">Wir arbeiten an etwas Großartigem</p>
+        <p class="subtitle-en">We are working on something great</p>
+        
+        <p class="description">
+            <strong>DE:</strong> Unsere neue Website wird bald verfügbar sein. 
+            Physikalische Medizin & Rehabilitation in Wien mit modernsten Technologien.
+            <br><br>
+            <strong>EN:</strong> Our new website will be available soon. 
+            Physical Medicine & Rehabilitation in Vienna with state-of-the-art technologies.
+        </p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📞</span>
+                <a href="tel:+43176929991">01 / 769 29 91</a>
             </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-label">IHRE GESUNDHEIT IM MITTELPUNKT</div>
-                    <h1 class="hero-title">Physikalische Medizin & Rehabilitation Wien</h1>
-                    <p class="hero-description">Spezialisierte Therapien für Bewegungsapparat-Störungen, Schmerzbehandlung und funktionelle Wiederherstellung mit modernsten Technologien.</p>
-                    
-                    <blockquote class="hero-quote">
-                        „Der Mensch muss stets im Mittelpunkt aller medizinischen, ökonomischen und fachlichen Bemühungen stehen."
-                    </blockquote>
-
-                    <div class="hero-contact-boxes">
-                        <div class="contact-box">
-                            <div class="contact-label">Telefon</div>
-                            <a href="tel:+43176929991" class="contact-value">01 / 769 29 91</a>
-                        </div>
-                        <div class="contact-box">
-                            <div class="contact-label">E-Mail</div>
-                            <a href="mailto:office@drcenik.at" class="contact-value">office@drcenik.at</a>
-                        </div>
-                    </div>
-
-                    <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary">Termin online buchen</a>
-                        <a href="#" class="btn btn-secondary">Mehr erfahren</a>
-                    </div>
-                </div>
-
-                <div class="hero-doctor-card">
-                    <div class="doctor-card">
-                        <div class="doctor-title">Dr. med. univ.</div>
-                        <h2 class="doctor-name">Fadime Cenik</h2>
-                        <p class="doctor-subtitle">Fachärztin für Physikalische Medizin und allgemeine Rehabilitation</p>
-                        <p class="doctor-description">Spezialisiert auf physikalische Medizin, Rehabilitation und innovative Schmerztherapie mit modernsten Technologien.</p>
-                    </div>
-                </div>
+            <div class="contact-item">
+                <span>📧</span>
+                <a href="mailto:office@drcenik.at">office@drcenik.at</a>
             </div>
-        </section>
-
-        <!-- Therapies Section -->
-        <section id="therapies" class="therapies">
-            <div class="container">
-                <h2 class="section-title">Unser Therapieangebot</h2>
-                <p class="section-subtitle">Spezialisierte Behandlungen für optimale Gesundheit und Funktionalität</p>
-
-                <div class="therapies-grid">
-                    <div class="therapy-card">
-                        <h3>Fachkompetenz</h3>
-                        <p>Spezialisierte Therapien für Bewegungsapparat-Störungen, Schmerzbehandlung und funktionelle Wiederherstellung mit modernsten Technologien und evidenzbasierten Methoden.</p>
-                        <a href="#" class="card-link">Mehr erfahren →</a>
-                    </div>
-                    <div class="therapy-card">
-                        <h3>Akademisch</h3>
-                        <p>MedUni Wien, Facharztdiplom, kontinuierliche Fortbildung</p>
-                    </div>
-                    <div class="therapy-card">
-                        <h3>Ordination in Wien</h3>
-                        <p>Wien 11, Kaiser-Ebersdorfer-Straße 328</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- News Section -->
-        <section id="news" class="news">
-            <div class="container">
-                <h2 class="section-title">Aktuelle Medizinische Erkenntnisse 2026</h2>
-                <p class="section-subtitle">Neueste Entwicklungen in der Rehabilitationsmedizin und Gesundheitsforschung</p>
-
-                <div class="news-grid">
-                    <article class="news-card">
-                        <div class="news-badge">INNOVATION</div>
-                        <h3>Künstliche Intelligenz in der Physiotherapie: Bewegungsanalyse und Patientendatenoptimierung</h3>
-                        <p>AI-gestützte Bewegungsanalyse revolutioniert die Physiotherapie durch objektive Datenerfassung</p>
-                        <a href="#" class="news-link">Lesen →</a>
-                    </article>
-                    <article class="news-card">
-                        <div class="news-badge">SCHMERZTHERAPIE</div>
-                        <h3>Gen-Therapie Durchbruch: Nicht-süchtig machende Schmerzbehandlung</h3>
-                        <p>Revolutionäre Gen-Therapie zielt auf Schmerzrezeptoren</p>
-                        <a href="#" class="news-link">Lesen →</a>
-                    </article>
-                    <article class="news-card">
-                        <div class="news-badge">REHABILITATION</div>
-                        <h3>Neurorehabilitation: Ganzheitliche Behandlung von neuropathischen Schmerzen</h3>
-                        <p>Fortschrittliche Neurorehabilitation adressiert neuropathische Schmerzen</p>
-                        <a href="#" class="news-link">Lesen →</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Vouchers Section -->
-        <section class="vouchers">
-            <div class="container">
-                <div class="voucher-content">
-                    <div class="voucher-icon">🎁</div>
-                    <h2>Das perfekte Geschenk für Ihre Lieben</h2>
-                    <p>Wenn Sie Ihre Lieben beschenken wollen, können Sie bei uns gerne auch Gutscheine erwerben. Wählen Sie aus verschiedenen Paketen und schenken Sie Gesundheit und Wohlbefinden.</p>
-                    <ul class="voucher-features">
-                        <li>✓ Flexible Pakete für jeden Bedarf</li>
-                        <li>✓ Gültig für alle Therapien</li>
-                        <li>✓ Perfekt als Geschenk</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Gutschein anfragen</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hours Section -->
-        <section class="hours">
-            <div class="container">
-                <div class="hours-grid">
-                    <div class="hours-box">
-                        <h3>Ordinationszeiten</h3>
-                        <div class="hours-list">
-                            <div class="hours-item">
-                                <span class="day">Mo & Mi</span>
-                                <span class="time">15:00 - 18:00</span>
-                            </div>
-                            <div class="hours-item">
-                                <span class="day">Di & Do</span>
-                                <span class="time">08:00 - 11:00</span>
-                            </div>
-                        </div>
-                        <p class="hours-note">Termine zur Erstuntersuchung nach telefonischer Vereinbarung</p>
-                    </div>
-                    <div class="hours-box">
-                        <h3>Therapiezeiten</h3>
-                        <div class="hours-list">
-                            <div class="hours-item">
-                                <span class="day">Mo</span>
-                                <span class="time">07:00 - 19:00</span>
-                            </div>
-                            <div class="hours-item">
-                                <span class="day">Di, Mi, Do</span>
-                                <span class="time">06:30 - 19:00</span>
-                            </div>
-                            <div class="hours-item">
-                                <span class="day">Fr</span>
-                                <span class="time">06:30 - 17:00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="container">
-                <h2>Bereit für Ihre Gesundheit?</h2>
-                <p>Vereinbaren Sie noch heute einen Termin mit Dr. Fadime Cenik und erleben Sie hochwertige medizinische Versorgung in Wien.</p>
-                <a href="#" class="btn btn-primary btn-large">Termin online buchen</a>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Kontaktieren Sie uns</h3>
-                        <div class="contact-item">
-                            <strong>Adresse:</strong>
-                            <p>Wien 11, Kaiser-Ebersdorfer-Straße 328</p>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Telefon:</strong>
-                            <a href="tel:+43176929991">01 / 769 29 91</a>
-                        </div>
-                        <div class="contact-item">
-                            <strong>E-Mail:</strong>
-                            <a href="mailto:office@drcenik.at">office@drcenik.at</a>
-                        </div>
-                    </div>
-                    <div class="contact-transport">
-                        <h3>Öffentliche Verkehrsmittel</h3>
-                        <p><strong>BUS:</strong> Linie 6A, 67</p>
-                        <p><strong>TRAM:</strong> Linie 6, 67</p>
-                        <p><strong>Station:</strong> Kaiser-Ebersdorfer-Straße</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <a href="#">Startseite</a>
-                    <a href="#therapies">Therapieangebot</a>
-                    <a href="#news">Häufige Fragen</a>
-                    <a href="#">Über uns</a>
-                    <a href="tel:+43176929991">01 / 769 29 91</a>
-                    <a href="mailto:office@drcenik.at">office@drcenik.at</a>
-                    <a href="pages/impressum.html">Impressum</a>
-                    <a href="pages/datenschutz.html">Datenschutzerklärung</a>
-                    <a href="pages/agb.html">AGB</a>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Dr. Fadime Cenik. Alle Rechte vorbehalten.</p>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Cookie Banner -->
-        <div id="cookie-banner" class="cookie-banner">
-            <div class="cookie-content">
-                <h3>🍪 Cookie-Einstellungen</h3>
-                <p>Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und unsere Website zu optimieren. Bitte wählen Sie Ihre Vorlieben aus.</p>
-            </div>
-            <div class="cookie-buttons">
-                <button id="cookie-settings" class="btn-secondary">Einstellungen</button>
-                <button id="cookie-reject" class="btn-secondary">Ablehnen</button>
-                <button id="cookie-accept" class="btn-primary">Alle akzeptieren</button>
+            <div class="contact-item">
+                <span>📍</span>
+                <span>Kaiser-Ebersdorfer-Straße 328, 1110 Wien</span>
             </div>
         </div>
+        
+        <div class="language-note">
+            <p>🇩🇪 Deutsch | 🇬🇧 English</p>
+            <p>© 2026 Dr. Fadime Cenik. Alle Rechte vorbehalten. / All rights reserved.</p>
+        </div>
     </div>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
