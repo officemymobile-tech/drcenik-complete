@@ -1,436 +1,260 @@
-/* ============================================
-   DR. FADIME CENIK - MAIN JAVASCRIPT
-   ============================================ */
+// Dr. Fadime Cenik - Main JavaScript
+// Standalone, Independent JS
 
-// Current language state
-let currentLanguage = 'de';
+(function() {
+    'use strict';
 
-// Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', function() {
-    initializeLanguage();
-    initializeCookies();
-    initializeEventListeners();
-    initializeScrollEffects();
-    console.log('Dr. Fadime Cenik - Website initialized');
-});
+    // ============================================
+    // LANGUAGE MANAGEMENT
+    // ============================================
+    
+    const DEFAULT_LANG = 'de';
+    let currentLang = localStorage.getItem('drcenik-lang') || DEFAULT_LANG;
 
-// ============================================
-// LANGUAGE MANAGEMENT
-// ============================================
-
-function initializeLanguage() {
-    // Check for saved language preference
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage && ['de', 'tr', 'en'].includes(savedLanguage)) {
-        currentLanguage = savedLanguage;
-    } else {
-        // Detect browser language
-        const browserLang = navigator.language.split('-')[0].toLowerCase();
-        if (['de', 'tr', 'en'].includes(browserLang)) {
-            currentLanguage = browserLang;
-        } else {
-            currentLanguage = 'de'; // Default to German
+    function setLanguage(lang) {
+        if (!translations[lang]) {
+            console.warn(`Language "${lang}" not found, falling back to ${DEFAULT_LANG}`);
+            lang = DEFAULT_LANG;
         }
-    }
-    
-    updateLanguageUI();
-}
-
-function updateLanguageUI() {
-    // Update all language-specific elements
-    const elements = document.querySelectorAll('[class*="de"], [class*="tr"], [class*="en"]');
-    
-    elements.forEach(element => {
-        if (element.classList.contains(currentLanguage)) {
-            element.style.display = '';
-        } else if (element.classList.contains('de') || element.classList.contains('tr') || element.classList.contains('en')) {
-            element.style.display = 'none';
-        }
-    });
-    
-    // Update active language button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.dataset.lang === currentLanguage) {
-            btn.classList.add('active');
-        }
-    });
-    
-    // Update page title
-    updatePageTitle();
-    
-    // Save preference
-    localStorage.setItem('language', currentLanguage);
-}
-
-function updatePageTitle() {
-    const titles = {
-        de: 'Dr. Fadime Cenik - Physikalische Medizin & Rehabilitation Wien',
-        tr: 'Dr. Fadime Cenik - Fizik Tıp ve Rehabilitasyon Wien',
-        en: 'Dr. Fadime Cenik - Physical Medicine & Rehabilitation Vienna'
-    };
-    document.title = titles[currentLanguage] || titles['de'];
-}
-
-// Language button click handlers
-document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('lang-btn')) {
-        const lang = e.target.dataset.lang;
-        if (lang && ['de', 'tr', 'en'].includes(lang)) {
-            currentLanguage = lang;
-            updateLanguageUI();
-        }
-    }
-});
-
-// ============================================
-// COOKIE MANAGEMENT
-// ============================================
-
-function initializeCookies() {
-    const cookieBanner = document.getElementById('cookie-banner');
-    const cookieConsent = localStorage.getItem('cookieConsent');
-    
-    if (!cookieConsent) {
-        cookieBanner.classList.remove('hidden');
-    } else {
-        cookieBanner.classList.add('hidden');
-    }
-    
-    // Cookie accept button
-    const acceptBtn = document.getElementById('cookie-accept');
-    if (acceptBtn) {
-        acceptBtn.addEventListener('click', function() {
-            localStorage.setItem('cookieConsent', 'all');
-            cookieBanner.classList.add('hidden');
-            initializeAnalytics();
-            trackEvent('cookies_accepted', { consent_type: 'all' });
+        
+        currentLang = lang;
+        localStorage.setItem('drcenik-lang', lang);
+        
+        // Update all translatable elements
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+        
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+        
+        // Update active states on language buttons
+        document.querySelectorAll('.lang-btn, .footer-lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
         });
     }
+
+    // ============================================
+    // MOBILE MENU
+    // ============================================
     
-    // Cookie reject button
-    const rejectBtn = document.getElementById('cookie-reject');
-    if (rejectBtn) {
-        rejectBtn.addEventListener('click', function() {
-            localStorage.setItem('cookieConsent', 'none');
-            cookieBanner.classList.add('hidden');
-            trackEvent('cookies_rejected', { consent_type: 'none' });
+    function initMobileMenu() {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const nav = document.getElementById('nav');
+        
+        if (!menuBtn) return;
+        
+        // Create mobile nav if it doesn't exist
+        let mobileNav = document.querySelector('.mobile-nav');
+        if (!mobileNav) {
+            mobileNav = document.createElement('nav');
+            mobileNav.className = 'mobile-nav';
+            mobileNav.innerHTML = `
+                <ul class="mobile-nav-list">
+                    <li><a href="#hero" class="mobile-nav-link" data-i18n="footer.home">Startseite</a></li>
+                    <li><a href="#services" class="mobile-nav-link" data-i18n="nav.therapies">Therapieangebot</a></li>
+                    <li><a href="#news" class="mobile-nav-link" data-i18n="nav.news">Wissen & News</a></li>
+                    <li><a href="#vouchers" class="mobile-nav-link">Gutscheine</a></li>
+                    <li><a href="#hours" class="mobile-nav-link" data-i18n="hours.title">Ordinationszeiten</a></li>
+                    <li><a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">Kontakt</a></li>
+                </ul>
+            `;
+            document.body.appendChild(mobileNav);
+        }
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking a link
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
         });
     }
+
+    // ============================================
+    // COOKIE BANNER
+    // ============================================
     
-    // Cookie settings button
-    const settingsBtn = document.getElementById('cookie-settings');
-    if (settingsBtn) {
-        settingsBtn.addEventListener('click', function() {
-            // Open cookie settings modal (can be expanded)
-            const message = currentLanguage === 'de' 
-                ? 'Cookie-Einstellungen: Diese Website verwendet nur notwendige Cookies.'
-                : currentLanguage === 'tr'
-                ? 'Çerez Ayarları: Bu web sitesi yalnızca gerekli çerezleri kullanır.'
-                : 'Cookie Settings: This website uses only necessary cookies.';
-            alert(message);
-        });
+    function initCookieBanner() {
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('cookie-accept');
+        const rejectBtn = document.getElementById('cookie-reject');
+        
+        if (!banner) return;
+        
+        // Check if user has already made a choice
+        const cookieChoice = localStorage.getItem('drcenik-cookies');
+        
+        if (!cookieChoice) {
+            // Show banner after a short delay
+            setTimeout(() => {
+                banner.classList.add('show');
+            }, 1000);
+        }
+        
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('drcenik-cookies', 'accepted');
+                banner.classList.remove('show');
+            });
+        }
+        
+        if (rejectBtn) {
+            rejectBtn.addEventListener('click', () => {
+                localStorage.setItem('drcenik-cookies', 'rejected');
+                banner.classList.remove('show');
+            });
+        }
     }
-}
 
-// Analytics placeholder
-function initializeAnalytics() {
-    console.log('Analytics initialized');
-    // Add your analytics code here (Google Analytics, Matomo, etc.)
-}
-
-// ============================================
-// EVENT LISTENERS
-// ============================================
-
-function initializeEventListeners() {
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href !== '#') {
-                e.preventDefault();
+    // ============================================
+    // SMOOTH SCROLL
+    // ============================================
+    
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
                 const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                    e.preventDefault();
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
                 }
-            }
+            });
         });
-    });
-    
-    // Navigation section buttons
-    document.querySelectorAll('[data-section]').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const section = this.dataset.section;
-            const target = document.getElementById(section);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-    
-    // Phone and email links - allow default behavior
-    document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"]').forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href.startsWith('tel:')) {
-                trackEvent('phone_click', { phone: href });
-            } else if (href.startsWith('mailto:')) {
-                trackEvent('email_click', { email: href });
-            }
-        });
-    });
-    
-    // Track button clicks
-    document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            const text = this.textContent.trim();
-            trackEvent('button_click', { button_text: text });
-        });
-    });
-}
-
-// ============================================
-// SCROLL EFFECTS
-// ============================================
-
-function initializeScrollEffects() {
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    // Observe all cards and sections
-    document.querySelectorAll('.therapy-card, .news-card, .hours-box, .contact-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-    
-    // Navbar scroll effect
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > 100) {
-            navbar.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
-        } else {
-            navbar.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
-        }
-        
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
-}
-
-// ============================================
-// UTILITY FUNCTIONS
-// ============================================
-
-function trackEvent(eventName, eventData = {}) {
-    console.log(`Event: ${eventName}`, eventData);
-    
-    // Add timestamp
-    const eventWithTimestamp = {
-        ...eventData,
-        timestamp: new Date().toISOString(),
-        language: currentLanguage,
-        userAgent: navigator.userAgent
-    };
-    
-    // Store in localStorage for analytics
-    try {
-        const events = JSON.parse(localStorage.getItem('analyticsEvents') || '[]');
-        events.push({
-            name: eventName,
-            data: eventWithTimestamp
-        });
-        
-        // Keep only last 100 events
-        if (events.length > 100) {
-            events.shift();
-        }
-        
-        localStorage.setItem('analyticsEvents', JSON.stringify(events));
-    } catch (e) {
-        console.error('Error tracking event:', e);
     }
-}
 
-function formatPhoneNumber(phone) {
-    return phone.replace(/(\d{2})(\d{4})(\d{5})/, '$1 / $2 $3');
-}
-
-function getTranslation(key) {
-    const translations = {
-        de: {
-            'contact': 'Kontakt',
-            'phone': 'Telefon',
-            'email': 'E-Mail',
-            'address': 'Adresse',
-            'hours': 'Ordinationszeiten',
-            'therapies': 'Therapieangebot'
-        },
-        tr: {
-            'contact': 'İletişim',
-            'phone': 'Telefon',
-            'email': 'E-Posta',
-            'address': 'Adres',
-            'hours': 'Muayenehane Saatleri',
-            'therapies': 'Tedavi Seçenekleri'
-        },
-        en: {
-            'contact': 'Contact',
-            'phone': 'Phone',
-            'email': 'Email',
-            'address': 'Address',
-            'hours': 'Consultation Hours',
-            'therapies': 'Therapies'
-        }
-    };
+    // ============================================
+    // HEADER SCROLL EFFECT
+    // ============================================
     
-    return translations[currentLanguage][key] || key;
-}
+    function initHeaderScroll() {
+        const header = document.getElementById('header');
+        if (!header) return;
+        
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    }
 
-// ============================================
-// RESPONSIVE NAVIGATION
-// ============================================
-
-function handleResponsiveNav() {
-    const navbar = document.querySelector('.navbar');
-    const navMenu = document.querySelector('.navbar-menu');
+    // ============================================
+    // ANIMATIONS ON SCROLL
+    // ============================================
     
-    if (window.innerWidth < 768) {
-        // Mobile-specific code
-        if (navMenu) {
-            navMenu.style.flexDirection = 'column';
-        }
+    function initScrollAnimations() {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements that should animate
+        document.querySelectorAll('.service-card, .news-card, .hours-card, .vouchers-content').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    }
+
+    // ============================================
+    // LANGUAGE BUTTON HANDLERS
+    // ============================================
+    
+    function initLanguageButtons() {
+        document.querySelectorAll('.lang-btn, .footer-lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                if (lang) {
+                    setLanguage(lang);
+                }
+            });
+        });
+    }
+
+    // ============================================
+    // DROPDOWN MENU (KEYBOARD ACCESSIBILITY)
+    // ============================================
+    
+    function initDropdowns() {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            
+            if (!toggle || !menu) return;
+            
+            toggle.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    menu.style.opacity = menu.style.opacity === '1' ? '0' : '1';
+                    menu.style.visibility = menu.style.visibility === 'visible' ? 'hidden' : 'visible';
+                }
+            });
+        });
+    }
+
+    // ============================================
+    // INITIALIZE
+    // ============================================
+    
+    function init() {
+        // Set initial language
+        setLanguage(currentLang);
+        
+        // Initialize all components
+        initMobileMenu();
+        initCookieBanner();
+        initSmoothScroll();
+        initHeaderScroll();
+        initScrollAnimations();
+        initLanguageButtons();
+        initDropdowns();
+        
+        console.log('Dr. Fadime Cenik Website initialized');
+    }
+
+    // Run when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
     } else {
-        // Desktop-specific code
-        if (navMenu) {
-            navMenu.style.flexDirection = 'row';
-        }
+        init();
     }
-}
 
-window.addEventListener('resize', function() {
-    handleResponsiveNav();
-});
-
-// Call on initial load
-handleResponsiveNav();
-
-// ============================================
-// EXPORT PUBLIC API
-// ============================================
-
-window.drcenik = {
-    // Language functions
-    changeLanguage: function(lang) {
-        if (['de', 'tr', 'en'].includes(lang)) {
-            currentLanguage = lang;
-            updateLanguageUI();
-            return true;
-        }
-        return false;
-    },
-    
-    getCurrentLanguage: function() {
-        return currentLanguage;
-    },
-    
-    getTranslation: getTranslation,
-    
-    // Analytics functions
-    trackEvent: trackEvent,
-    
-    getAnalyticsEvents: function() {
-        try {
-            return JSON.parse(localStorage.getItem('analyticsEvents') || '[]');
-        } catch (e) {
-            return [];
-        }
-    },
-    
-    clearAnalyticsEvents: function() {
-        localStorage.removeItem('analyticsEvents');
-        return true;
-    },
-    
-    // Cookie functions
-    getCookieConsent: function() {
-        return localStorage.getItem('cookieConsent');
-    },
-    
-    setCookieConsent: function(consent) {
-        localStorage.setItem('cookieConsent', consent);
-        return true;
-    },
-    
-    // Utility functions
-    formatPhoneNumber: formatPhoneNumber,
-    
-    // Version info
-    version: '1.0.0',
-    author: 'Dr. Fadime Cenik',
-    created: '2026-01-29'
-};
-
-// ============================================
-// PERFORMANCE OPTIMIZATION
-// ============================================
-
-// Lazy load images if needed
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    observer.unobserve(img);
-                }
-            }
-        });
-    });
-    
-    document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
-}
-
-// ============================================
-// ERROR HANDLING
-// ============================================
-
-window.addEventListener('error', function(event) {
-    console.error('Global error:', event.error);
-    trackEvent('error', {
-        message: event.message,
-        source: event.filename,
-        lineno: event.lineno,
-        colno: event.colno
-    });
-});
-
-window.addEventListener('unhandledrejection', function(event) {
-    console.error('Unhandled promise rejection:', event.reason);
-    trackEvent('unhandled_rejection', {
-        reason: event.reason ? event.reason.toString() : 'Unknown'
-    });
-});
-
-console.log('Dr. Fadime Cenik - All scripts loaded successfully');
+})();

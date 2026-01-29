@@ -3,245 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impressum - Dr. Fadime Cenik, Fachärztin für Physikalische Medizin und Rehabilitation in Wien">
     <meta name="robots" content="noindex, follow">
     <title>Impressum - Dr. Fadime Cenik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .legal-page {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .legal-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 2rem;
+        }
+        .legal-section {
+            margin-bottom: 2rem;
+        }
+        .legal-section h2 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .legal-section p, .legal-section li {
+            color: var(--color-text-muted);
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        .legal-section ul {
+            padding-left: 1.5rem;
+        }
+        .legal-section ul li {
+            list-style: disc;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-accent);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            color: var(--color-accent-light);
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-brand">
-                <a href="../index.html" class="logo">Dr. Fadime Cenik</a>
-            </div>
-            <div class="navbar-menu">
-                <a href="../index.html" class="nav-item">
-                    <span class="nav-text de">Startseite</span>
-                    <span class="nav-text tr" style="display:none;">Anasayfa</span>
-                    <span class="nav-text en" style="display:none;">Home</span>
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">Dr. Fadime Cenik</span>
+            </a>
+            <div class="header-actions">
+                <a href="tel:+4317692991" class="phone-link">
+                    <span class="phone-icon">📞</span>
+                    <span>01 / 769 29 91</span>
                 </a>
-                <a href="../index.html#contact" class="nav-item">
-                    <span class="nav-text de">Kontakt</span>
-                    <span class="nav-text tr" style="display:none;">İletişim</span>
-                    <span class="nav-text en" style="display:none;">Contact</span>
-                </a>
-            </div>
-            <div class="language-selector">
-                <button class="lang-btn active" data-lang="de">DE</button>
-                <button class="lang-btn" data-lang="tr">TR</button>
-                <button class="lang-btn" data-lang="en">EN</button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Content -->
     <main class="legal-page">
         <div class="container">
-            <h1 class="de">Impressum</h1>
-            <h1 class="tr" style="display:none;">İmprint</h1>
-            <h1 class="en" style="display:none;">Imprint</h1>
-
-            <section class="legal-section">
-                <h2 class="de">Angaben gemäß § 5 TMG</h2>
-                <h2 class="tr" style="display:none;">§ 5 TMG'ye göre Bilgiler</h2>
-                <h2 class="en" style="display:none;">Information according to § 5 TMG</h2>
-
-                <div class="de">
-                    <h3>Betreiber der Website</h3>
-                    <p>
-                        <strong>Dr. med. univ. Fadime Cenik</strong><br>
-                        Fachärztin für Physikalische Medizin und allgemeine Rehabilitation<br>
-                        Kaiser-Ebersdorfer-Straße 328<br>
-                        1110 Wien, Österreich
-                    </p>
-
-                    <h3>Kontakt</h3>
-                    <p>
-                        <strong>Telefon:</strong> 01 / 769 29 91<br>
-                        <strong>E-Mail:</strong> <a href="mailto:office@drcenik.at">office@drcenik.at</a>
-                    </p>
-
-                    <h3>Berufsbezeichnung</h3>
-                    <p>
-                        Fachärztin für Physikalische Medizin und allgemeine Rehabilitation<br>
-                        Verliehen in: Österreich
-                    </p>
-
-                    <h3>Berufsordnung</h3>
-                    <p>
-                        Die Berufsordnung für Ärzte in Österreich finden Sie unter:<br>
-                        <a href="https://www.aerztekammer.at/" target="_blank">www.aerztekammer.at</a>
-                    </p>
-
-                    <h3>Haftung für Inhalte</h3>
-                    <p>
-                        Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-                    </p>
-
-                    <h3>Haftung für Links</h3>
-                    <p>
-                        Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
-                    </p>
-
-                    <h3>Urheberrecht</h3>
-                    <p>
-                        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Autors oder Urhebers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
-                    </p>
-
-                    <h3>Datenschutz</h3>
-                    <p>
-                        Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Bitte beachten Sie unsere <a href="datenschutz.html">Datenschutzerklärung</a>.
-                    </p>
-
-                    <h3>Disclaimer</h3>
-                    <p>
-                        Die Informationen auf dieser Website dienen nur zu Informationszwecken und ersetzen nicht die medizinische Beratung durch einen Arzt. Dr. Fadime Cenik übernimmt keine Haftung für die Vollständigkeit oder Richtigkeit der bereitgestellten Informationen. Die Nutzung der Informationen erfolgt auf eigene Verantwortung des Nutzers.
-                    </p>
+            <div class="legal-content">
+                <a href="../index.html" class="back-link">← Zurück zur Startseite</a>
+                
+                <h1 class="legal-title">Impressum</h1>
+                
+                <div class="legal-section">
+                    <h2>Angaben gemäß § 5 ECG</h2>
+                    <p><strong>Dr. med. univ. Fadime Cenik</strong></p>
+                    <p>Fachärztin für Physikalische Medizin und allgemeine Rehabilitation</p>
                 </div>
-
-                <div class="tr" style="display:none;">
-                    <h3>Web Sitesi Operatörü</h3>
-                    <p>
-                        <strong>Dr. med. univ. Fadime Cenik</strong><br>
-                        Fizik Tıp ve Genel Rehabilitasyon Uzmanı<br>
-                        Kaiser-Ebersdorfer-Straße 328<br>
-                        1110 Wien, Avusturya
-                    </p>
-
-                    <h3>İletişim</h3>
-                    <p>
-                        <strong>Telefon:</strong> 01 / 769 29 91<br>
-                        <strong>E-Posta:</strong> <a href="mailto:office@drcenik.at">office@drcenik.at</a>
-                    </p>
-
-                    <h3>Meslek Unvanı</h3>
-                    <p>
-                        Fizik Tıp ve Genel Rehabilitasyon Uzmanı<br>
-                        Verildiği Yer: Avusturya
-                    </p>
-
-                    <h3>Sorumluluk Reddi</h3>
-                    <p>
-                        Bu web sitesindeki bilgiler yalnızca bilgilendirme amaçlıdır ve bir doktor tarafından tıbbi tavsiye yerine geçmez. Dr. Fadime Cenik, sağlanan bilgilerin eksiksizliği veya doğruluğu için hiçbir sorumluluk kabul etmez. Bilgilerin kullanımı kullanıcının kendi sorumluluğundadır.
-                    </p>
+                
+                <div class="legal-section">
+                    <h2>Kontakt</h2>
+                    <p><strong>Adresse:</strong> Kaiser-Ebersdorfer-Straße 328, 1110 Wien, Österreich</p>
+                    <p><strong>Telefon:</strong> +43 1 769 29 91</p>
+                    <p><strong>E-Mail:</strong> office@drcenik.at</p>
+                    <p><strong>Website:</strong> www.drcenik.at</p>
                 </div>
-
-                <div class="en" style="display:none;">
-                    <h3>Website Operator</h3>
-                    <p>
-                        <strong>Dr. med. univ. Fadime Cenik</strong><br>
-                        Specialist in Physical Medicine and General Rehabilitation<br>
-                        Kaiser-Ebersdorfer-Straße 328<br>
-                        1110 Vienna, Austria
-                    </p>
-
-                    <h3>Contact</h3>
-                    <p>
-                        <strong>Phone:</strong> 01 / 769 29 91<br>
-                        <strong>Email:</strong> <a href="mailto:office@drcenik.at">office@drcenik.at</a>
-                    </p>
-
-                    <h3>Professional Designation</h3>
-                    <p>
-                        Specialist in Physical Medicine and General Rehabilitation<br>
-                        Issued in: Austria
-                    </p>
-
-                    <h3>Disclaimer</h3>
-                    <p>
-                        The information on this website is for informational purposes only and does not replace medical advice from a physician. Dr. Fadime Cenik assumes no liability for the completeness or accuracy of the information provided. The use of the information is at the user's own risk.
-                    </p>
+                
+                <div class="legal-section">
+                    <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+                    <p><strong>Berufsbezeichnung:</strong> Fachärztin für Physikalische Medizin und allgemeine Rehabilitation</p>
+                    <p><strong>Verleihungsstaat:</strong> Österreich</p>
+                    <p><strong>Zuständige Kammer:</strong> Ärztekammer für Wien</p>
+                    <p><strong>Berufsrechtliche Regelungen:</strong> Ärztegesetz 1998 (ÄrzteG 1998)</p>
                 </div>
-            </section>
+                
+                <div class="legal-section">
+                    <h2>Aufsichtsbehörde</h2>
+                    <p>Österreichische Ärztekammer</p>
+                    <p>Weihburggasse 10-12, 1010 Wien</p>
+                    <p>www.aerztekammer.at</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>Haftungsausschluss</h2>
+                    <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+                    <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 ECG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 ECG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>Urheberrecht</h2>
+                    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>Streitschlichtung</h2>
+                    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a></p>
+                    <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+                </div>
+            </div>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4 class="de">Navigation</h4>
-                    <h4 class="tr" style="display:none;">Navigasyon</h4>
-                    <h4 class="en" style="display:none;">Navigation</h4>
-                    <ul>
-                        <li><a href="../index.html" class="de">Startseite</a></li>
-                        <li><a href="../index.html" class="tr" style="display:none;">Anasayfa</a></li>
-                        <li><a href="../index.html" class="en" style="display:none;">Home</a></li>
-                        <li><a href="datenschutz.html" class="de">Datenschutzerklärung</a></li>
-                        <li><a href="datenschutz.html" class="tr" style="display:none;">Gizlilik Politikası</a></li>
-                        <li><a href="datenschutz.html" class="en" style="display:none;">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p class="de">&copy; 2026 Dr. Fadime Cenik. Alle Rechte vorbehalten.</p>
-                <p class="tr" style="display:none;">&copy; 2026 Dr. Fadime Cenik. Tüm Hakları Saklıdır.</p>
-                <p class="en" style="display:none;">&copy; 2026 Dr. Fadime Cenik. All Rights Reserved.</p>
+                <p class="footer-copyright">© 2026 Dr. Fadime Cenik. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Styles for legal pages -->
-    <style>
-        .legal-page {
-            min-height: 80vh;
-            padding: 3rem 0;
-        }
-
-        .legal-section {
-            background-color: var(--secondary-color);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        .legal-section h2 {
-            color: var(--primary-color);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .legal-section h3 {
-            color: var(--primary-color);
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .legal-section p {
-            color: var(--light-gray);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        .legal-section a {
-            color: var(--primary-color);
-            text-decoration: underline;
-        }
-
-        .legal-section a:hover {
-            color: var(--primary-dark);
-        }
-
-        @media (max-width: 768px) {
-            .legal-page {
-                padding: 2rem 0;
-            }
-
-            .legal-section {
-                padding: 1.5rem;
-            }
-
-            .legal-section p {
-                text-align: left;
-            }
-        }
-    </style>
-
-    <script src="../js/main.js"></script>
 </body>
 </html>
