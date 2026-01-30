@@ -3,380 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dr. Fadime Cenik - Fachärztin für Physikalische Medizin und allgemeine Rehabilitation in Wien">
-    <meta name="theme-color" content="#1e3a5f">
-    
+    <meta name="description" content="Dr. Fadime Cenik - Fachärztin für Physikalische Medizin und allgemeine Rehabilitation in 1110 Wien. Alle Kassen.">
     <title>Dr. Fadime Cenik | Physikalische Medizin & Rehabilitation Wien</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <!-- ============================================ -->
-    <!-- ENTRY SCREEN -->
-    <!-- ============================================ -->
     <section id="entry" class="screen active">
         <div class="entry-container">
-            <!-- Subtle Logo -->
             <div class="entry-logo">
                 <svg class="human-figure" viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Head -->
                     <circle cx="30" cy="12" r="8" fill="currentColor"/>
-                    <!-- Shoulder -->
-                    <circle cx="18" cy="35" r="5" fill="currentColor"/>
-                    <!-- Elbow -->
-                    <circle cx="8" cy="55" r="4" fill="currentColor"/>
-                    <!-- Hand -->
-                    <circle cx="15" cy="72" r="3" fill="currentColor"/>
-                    <!-- Hip -->
-                    <circle cx="35" cy="60" r="5" fill="currentColor"/>
-                    <!-- Knee -->
-                    <circle cx="25" cy="85" r="4" fill="currentColor"/>
-                    <!-- Foot -->
-                    <circle cx="40" cy="110" r="3" fill="currentColor"/>
-                    <!-- Connecting curves -->
-                    <path d="M30 20 Q24 28 18 35" stroke="currentColor" stroke-width="2" fill="none"/>
-                    <path d="M18 35 Q12 45 8 55" stroke="currentColor" stroke-width="2" fill="none"/>
-                    <path d="M8 55 Q10 65 15 72" stroke="currentColor" stroke-width="2" fill="none"/>
-                    <path d="M18 35 Q28 48 35 60" stroke="currentColor" stroke-width="2" fill="none"/>
-                    <path d="M35 60 Q28 72 25 85" stroke="currentColor" stroke-width="2" fill="none"/>
-                    <path d="M25 85 Q32 98 40 110" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M30 20 Q24 28 18 35" stroke="currentColor" stroke-width="2"/>
                 </svg>
             </div>
-
-            <!-- Greeting -->
             <div class="entry-greeting">
-                <h1 class="typing-text" data-i18n="entry.greeting"></h1>
-                <p class="entry-subtitle" data-i18n="entry.subtitle">Dr. Fadime Cenik – Physikalische Medizin & Rehabilitation</p>
+                <h1 class="typing-text">Dr. Fadime Cenik</h1>
+                <p class="entry-subtitle">Kassenärztin – Physikalische Medizin & Rehabilitation</p>
+                <p class="kassen-badge">Alle Kassen (ÖGK, SVS, BVAEB, KFA)</p>
             </div>
-
-            <!-- Intent Choice Cards -->
             <div class="choice-cards">
                 <div class="choice-card" data-intent="urgent">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title" data-i18n="entry.choices.urgent.title">Ich suche Behandlung</h3>
-                    <p class="card-desc" data-i18n="entry.choices.urgent.desc">Direkte Hilfe bei akuten Beschwerden oder chronischen Schmerzen</p>
-                    <div class="card-accent"></div>
+                    <h3 data-i18n="entry.choices.urgent.title">Ich suche Behandlung</h3>
+                    <p>Direkte Hilfe bei akuten Beschwerden</p>
                 </div>
-
                 <div class="choice-card" data-intent="curious">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title" data-i18n="entry.choices.curious.title">Ich möchte verstehen</h3>
-                    <p class="card-desc" data-i18n="entry.choices.curious.desc">Therapiemöglichkeiten und Behandlungsansätze kennenlernen</p>
-                    <div class="card-accent"></div>
-                </div>
-
-                <div class="choice-card" data-intent="passive">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title" data-i18n="entry.choices.passive.title">Ich schaue mich um</h3>
-                    <p class="card-desc" data-i18n="entry.choices.passive.desc">Die Praxis und unser Angebot in Ruhe entdecken</p>
-                    <div class="card-accent"></div>
+                    <h3 data-i18n="entry.choices.curious.title">Leistungen</h3>
+                    <p>Therapiemöglichkeiten entdecken</p>
                 </div>
             </div>
         </div>
-
-        <!-- Footer Links -->
-        <footer class="entry-footer">
-            <a href="pages/impressum.html" data-i18n="footer.imprint">Impressum</a>
-            <span class="footer-divider">|</span>
-            <a href="pages/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
-        </footer>
     </section>
-
-    <!-- ============================================ -->
-    <!-- EXPERIENCE SCREEN -->
-    <!-- ============================================ -->
-    <section id="experience" class="screen">
-        <!-- Trust Module -->
-        <article id="trust-module" class="content-module">
-            <div class="module-inner">
-                <span class="module-label" data-i18n="modules.trust.label">Vertrauen</span>
-                <h2 class="module-title" data-i18n="modules.trust.title">Sie sind in guten Händen</h2>
-                <p class="module-text" data-i18n="modules.trust.text">Der erste Schritt ist oft der schwerste. Jeder Patient bringt seine eigene Geschichte mit – und wir hören zu, bevor wir handeln.</p>
-                
-                <div class="trust-points">
-                    <div class="trust-point">
-                        <div class="point-marker"></div>
-                        <span data-i18n="modules.trust.points.experience">Über 15 Jahre Erfahrung in der Rehabilitationsmedizin</span>
-                    </div>
-                    <div class="trust-point">
-                        <div class="point-marker"></div>
-                        <span data-i18n="modules.trust.points.personal">Individuelle Behandlungspläne für jeden Patienten</span>
-                    </div>
-                    <div class="trust-point">
-                        <div class="point-marker"></div>
-                        <span data-i18n="modules.trust.points.modern">Modernste Diagnostik und Therapieverfahren</span>
-                    </div>
-                </div>
+    <article id="action-module" class="content-module">
+        <div class="module-inner">
+            <h2 class="module-title">Kontakt & Ordination</h2>
+            <div class="action-buttons">
+                <a href="tel:+4317692991" class="action-btn primary">
+                    <span>Telefon: +43 1 769 29 91</span>
+                </a>
+                <a href="mailto:ordination@drcenik.at" class="action-btn secondary">
+                    <span>E-Mail schreiben</span>
+                </a>
             </div>
-        </article>
-
-        <!-- Expertise Module -->
-        <article id="expertise-module" class="content-module">
-            <div class="module-inner">
-                <span class="module-label" data-i18n="modules.expertise.label">Fachkompetenz</span>
-                <h2 class="module-title" data-i18n="modules.expertise.title">Spezialisierte Behandlung</h2>
-                
-                <!-- Doctor Profile -->
-                <div class="doctor-profile">
-                    <div class="profile-image">
-                        <div class="profile-placeholder">
-                            <span>Dr. F. Cenik</span>
-                        </div>
-                    </div>
-                    <div class="profile-info">
-                        <h3 class="profile-name">Dr. med. univ. Fadime Cenik</h3>
-                        <p class="profile-title" data-i18n="modules.expertise.doctor.title">Fachärztin für Physikalische Medizin und Allgemeine Rehabilitation</p>
-                        <p class="profile-desc" data-i18n="modules.expertise.doctor.desc">Moderne medizinische Methoden verbunden mit persönlicher Patientenbetreuung durch einen ganzheitlichen Ansatz.</p>
-                    </div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <span>Kaiser-Ebersdorfer-Straße 328, 1110 Wien</span>
                 </div>
-
-                <!-- Expertise Cards -->
-                <div class="expertise-cards">
-                    <div class="expertise-card" data-service="physical">
-                        <div class="expertise-header">
-                            <h4 data-i18n="modules.expertise.services.physical.title">Physikalische Medizin</h4>
-                            <span class="expand-icon">+</span>
-                        </div>
-                        <div class="expertise-content">
-                            <p data-i18n="modules.expertise.services.physical.desc">Ganzheitliche Diagnostik und Therapie von Erkrankungen des Bewegungsapparates mit modernsten physikalischen Methoden.</p>
-                            <ul class="expertise-list">
-                                <li data-i18n="modules.expertise.services.physical.items.0">Bewegungsanalyse</li>
-                                <li data-i18n="modules.expertise.services.physical.items.1">Schmerztherapie</li>
-                                <li data-i18n="modules.expertise.services.physical.items.2">Elektrotherapie</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="expertise-card" data-service="shockwave">
-                        <div class="expertise-header">
-                            <h4 data-i18n="modules.expertise.services.shockwave.title">Stoßwellentherapie</h4>
-                            <span class="expand-icon">+</span>
-                        </div>
-                        <div class="expertise-content">
-                            <p data-i18n="modules.expertise.services.shockwave.desc">Hochenergetische Stoßwellen zur Behandlung von chronischen Schmerzen und Verkalkungen.</p>
-                            <ul class="expertise-list">
-                                <li data-i18n="modules.expertise.services.shockwave.items.0">Fersensporn</li>
-                                <li data-i18n="modules.expertise.services.shockwave.items.1">Tennisellenbogen</li>
-                                <li data-i18n="modules.expertise.services.shockwave.items.2">Kalkschulter</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="expertise-card" data-service="manual">
-                        <div class="expertise-header">
-                            <h4 data-i18n="modules.expertise.services.manual.title">Manuelle Therapie</h4>
-                            <span class="expand-icon">+</span>
-                        </div>
-                        <div class="expertise-content">
-                            <p data-i18n="modules.expertise.services.manual.desc">Gezielte Handgriffe zur Mobilisation von Gelenken und Lösung von Muskelverspannungen.</p>
-                            <ul class="expertise-list">
-                                <li data-i18n="modules.expertise.services.manual.items.0">Gelenkmobilisation</li>
-                                <li data-i18n="modules.expertise.services.manual.items.1">Triggerpunkttherapie</li>
-                                <li data-i18n="modules.expertise.services.manual.items.2">Faszienbehandlung</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="expertise-card" data-service="rehab">
-                        <div class="expertise-header">
-                            <h4 data-i18n="modules.expertise.services.rehab.title">Rehabilitation</h4>
-                            <span class="expand-icon">+</span>
-                        </div>
-                        <div class="expertise-content">
-                            <p data-i18n="modules.expertise.services.rehab.desc">Umfassende Nachsorge nach Operationen und Verletzungen für eine optimale Genesung.</p>
-                            <ul class="expertise-list">
-                                <li data-i18n="modules.expertise.services.rehab.items.0">Postoperative Betreuung</li>
-                                <li data-i18n="modules.expertise.services.rehab.items.1">Sportrehabilitation</li>
-                                <li data-i18n="modules.expertise.services.rehab.items.2">Gangschulung</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <!-- Safety Module (Emotional) -->
-        <article id="safety-module" class="content-module">
-            <div class="module-inner">
-                <span class="module-label" data-i18n="modules.safety.label">Ihr Wohlbefinden</span>
-                <h2 class="module-title" data-i18n="modules.safety.title">Der Mensch im Mittelpunkt</h2>
-                
-                <blockquote class="philosophy-quote">
-                    <p data-i18n="modules.safety.quote">"Der Mensch muss immer im Mittelpunkt aller medizinischen, wirtschaftlichen und fachlichen Bemühungen stehen."</p>
-                    <cite>— Dr. Fadime Cenik</cite>
-                </blockquote>
-
-                <p class="module-text" data-i18n="modules.safety.text">Bei uns werden Sie nicht als Fall behandelt, sondern als Mensch. Ihre Gesundheit und Ihr Wohlbefinden stehen an erster Stelle.</p>
-            </div>
-        </article>
-
-        <!-- Action Module -->
-        <article id="action-module" class="content-module">
-            <div class="module-inner">
-                <h2 class="module-title action-title" data-i18n="modules.action.title">Sprechen wir über Sie.</h2>
-                <p class="module-text" data-i18n="modules.action.text">Vereinbaren Sie einen Termin und lassen Sie uns gemeinsam den besten Weg für Ihre Gesundheit finden.</p>
-                
-                <div class="action-buttons">
-                    <a href="tel:+4369910101968" class="action-btn primary">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                        </svg>
-                        <span data-i18n="modules.action.call">Jetzt anrufen</span>
-                    </a>
-                    <a href="mailto:ordination@drcenik.at" class="action-btn secondary">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                        <span data-i18n="modules.action.email">E-Mail schreiben</span>
-                    </a>
-                </div>
-
-                <div class="contact-info">
-                    <div class="info-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                        <span>Kaiser-Ebersdorfer-Straße 328, 1110 Wien</span>
-                    </div>
-                    <div class="info-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span data-i18n="modules.action.hours">Mo-Fr: 06:30 - 19:00 Uhr</span>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <!-- Experience Footer -->
-        <footer class="experience-footer">
-            <div class="footer-content">
-                <p>&copy; 2026 Dr. Fadime Cenik</p>
-                <div class="footer-links">
-                    <a href="pages/impressum.html" data-i18n="footer.imprint">Impressum</a>
-                    <a href="pages/datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
-                </div>
-            </div>
-        </footer>
-    </section>
-
-    <!-- ============================================ -->
-    <!-- AI GUIDE ORB -->
-    <!-- ============================================ -->
-    <div id="ai-orb" class="ai-orb">
-        <div class="orb-core">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-        </div>
-        <div class="orb-menu">
-            <button class="orb-option" data-action="guide">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
-                </svg>
-                <span data-i18n="orb.guide">Führung</span>
-            </button>
-            <button class="orb-option" data-action="question">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                <span data-i18n="orb.question">Frage stellen</span>
-            </button>
-            <button class="orb-option" data-action="simplify">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M4 6h16M4 12h16m-7 6h7"/>
-                </svg>
-                <span data-i18n="orb.simplify">Vereinfachen</span>
-            </button>
-            <button class="orb-option" data-action="language">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-                </svg>
-                <span data-i18n="orb.language">Sprache</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- ============================================ -->
-    <!-- MODALS -->
-    <!-- ============================================ -->
-    
-    <!-- Language Modal -->
-    <div id="language-modal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <h3 data-i18n="modals.language.title">Sprache wählen</h3>
-            <div class="language-options">
-                <button class="lang-btn active" data-lang="de">
-                    <span class="lang-name">Deutsch</span>
-                    <span class="lang-native">Deutsch</span>
-                </button>
-                <button class="lang-btn" data-lang="tr">
-                    <span class="lang-name">Türkisch</span>
-                    <span class="lang-native">Türkçe</span>
-                </button>
-                <button class="lang-btn" data-lang="en">
-                    <span class="lang-name">Englisch</span>
-                    <span class="lang-native">English</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Question Modal -->
-    <div id="question-modal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <h3 data-i18n="modals.questions.title">Häufige Fragen</h3>
-            
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h4 data-i18n="modals.questions.items.referral.q">Brauche ich eine Überweisung?</h4>
-                    <p data-i18n="modals.questions.items.referral.a">Nein, für den ersten Termin ist keine Überweisung erforderlich. Kontaktieren Sie uns direkt.</p>
-                </div>
-                <div class="faq-item">
-                    <h4 data-i18n="modals.questions.items.insurance.q">Welche Versicherung wird akzeptiert?</h4>
-                    <p data-i18n="modals.questions.items.insurance.a">Wir sind eine Wahlarztpraxis. Sie erhalten eine Rechnung zur Einreichung bei Ihrer Versicherung.</p>
-                </div>
-                <div class="faq-item">
-                    <h4 data-i18n="modals.questions.items.duration.q">Wie lange dauert eine Behandlung?</h4>
-                    <p data-i18n="modals.questions.items.duration.a">Die Erstuntersuchung dauert etwa 30-45 Minuten. Folgebehandlungen variieren je nach Therapie.</p>
-                </div>
-                <div class="faq-item">
-                    <h4 data-i18n="modals.questions.items.location.q">Wo befindet sich die Praxis?</h4>
-                    <p data-i18n="modals.questions.items.location.a">Kaiser-Ebersdorfer-Straße 328, 1110 Wien. Erreichbar mit Bus (71B, 73A, 76B) und Straßenbahn (11, 71).</p>
+                <div class="info-item">
+                    <span>Mo-Fr: 06:30 - 19:00 Uhr</span>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="ai/ux-engine.js"></script>
-    <script src="ui/motion.js"></script>
+    </article>
     <script src="js/main.js"></script>
 </body>
 </html>
