@@ -3,58 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dr. Fadime Cenik - Fachärztin für Physikalische Medizin und allgemeine Rehabilitation in 1110 Wien. Alle Kassen.">
-    <title>Dr. Fadime Cenik | Physikalische Medizin & Rehabilitation Wien</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Dr. Fadime Cenik - Kassenärztin für Physikalische Medizin und allgemeine Rehabilitation in Wien 1110. Alle Kassen: ÖGK, SVS, BVAEB, KFA.">
+    <meta name="theme-color" content="#1e3a5f">
+    <title>Dr. Fadime Cenik | Kassenärztin für Physikalische Medizin & Rehabilitation Wien</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section id="entry" class="screen active">
-        <div class="entry-container">
-            <div class="entry-logo">
-                <svg class="human-figure" viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- ============================================ -->
+    <!-- STICKY HEADER / NAVIGATION -->
+    <!-- ============================================ -->
+    <header id="main-header" class="sticky-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="#home" class="logo-link">
+                    <svg class="logo-icon" viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="12" r="8" fill="currentColor"/>
+                        <path d="M30 20 Q24 28 18 35" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="logo-text">Dr. Cenik</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="hamburger-btn" id="hamburger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Startseite</a></li>
+                    <li><a href="#services" class="nav-link">Leistungen</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#about" class="nav-link">Über uns</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-contact">
+                <a href="tel:+4317692991" class="phone-link">+43 1 769 29 91</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- HOME SECTION -->
+    <!-- ============================================ -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="kassen-badge">Kassenärztin – Alle Kassen (ÖGK, SVS, BVAEB, KFA)</div>
+                <h1 class="hero-title">Dr. Fadime Cenik</h1>
+                <p class="hero-subtitle">Fachärztin für Physikalische Medizin und allgemeine Rehabilitation</p>
+                <p class="hero-description">Spezialisierte Therapien für Bewegungsapparat-Störungen, Schmerzbehandlung und funktionelle Wiederherstellung mit modernsten Technologien.</p>
+                
+                <blockquote class="hero-quote">
+                    <p>"Der Mensch muss stets im Mittelpunkt aller medizinischen, ökonomischen und fachlichen Bemühungen stehen."</p>
+                    <cite>— Dr. Fadime Cenik</cite>
+                </blockquote>
+                
+                <div class="hero-buttons">
+                    <a href="tel:+4317692991" class="btn btn-primary">Jetzt anrufen</a>
+                    <a href="#contact" class="btn btn-secondary">Termin vereinbaren</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <svg class="hero-figure" viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="30" cy="12" r="8" fill="currentColor"/>
-                    <path d="M30 20 Q24 28 18 35" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="18" cy="35" r="5" fill="currentColor"/>
+                    <circle cx="8" cy="55" r="4" fill="currentColor"/>
+                    <circle cx="15" cy="72" r="3" fill="currentColor"/>
+                    <circle cx="35" cy="60" r="5" fill="currentColor"/>
+                    <circle cx="25" cy="85" r="4" fill="currentColor"/>
+                    <circle cx="40" cy="110" r="3" fill="currentColor"/>
+                    <path d="M30 20 Q24 28 18 35" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M18 35 Q12 45 8 55" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M8 55 Q10 65 15 72" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M18 35 Q28 48 35 60" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M35 60 Q28 72 25 85" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M25 85 Q32 98 40 110" stroke="currentColor" stroke-width="2" fill="none"/>
                 </svg>
             </div>
-            <div class="entry-greeting">
-                <h1 class="typing-text">Dr. Fadime Cenik</h1>
-                <p class="entry-subtitle">Kassenärztin – Physikalische Medizin & Rehabilitation</p>
-                <p class="kassen-badge">Alle Kassen (ÖGK, SVS, BVAEB, KFA)</p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SERVICES SECTION -->
+    <!-- ============================================ -->
+    <section id="services" class="services-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Unsere Leistungen</h2>
+                <p class="section-subtitle">Spezialisierte Behandlungsmethoden für Ihre körperliche Gesundheit und Ihr Wohlbefinden</p>
             </div>
-            <div class="choice-cards">
-                <div class="choice-card" data-intent="urgent">
-                    <h3 data-i18n="entry.choices.urgent.title">Ich suche Behandlung</h3>
-                    <p>Direkte Hilfe bei akuten Beschwerden</p>
+            
+            <div class="services-grid">
+                <!-- Service 1: Massagetherapien -->
+                <div class="service-card" data-service="massage">
+                    <div class="service-header">
+                        <h3 class="service-title">Massagetherapien</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="service-content">
+                        <p>Die Heilmassage ist eine manuelle Therapie, die Wirkung auf Muskulatur, Gewebe, Gefäße, innere Organe und Psyche hat. Sie dient zum vermehrten Stoffaustausch zwischen Blutgefäßen und Geweben, der örtlichen Mehrdurchblutung, der Steigerung oder Senkung des Muskeltonus, der Schmerzlinderung sowie der psychischen Entspannung.</p>
+                        <ul class="service-list">
+                            <li>Klassische Massage</li>
+                            <li>Lymphdrainage</li>
+                            <li>Triggerpunkttherapie</li>
+                            <li>Faszienbehandlung</li>
+                            <li>Akupressur</li>
+                            <li>Reflexzonenmassage</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="choice-card" data-intent="curious">
-                    <h3 data-i18n="entry.choices.curious.title">Leistungen</h3>
-                    <p>Therapiemöglichkeiten entdecken</p>
+
+                <!-- Service 2: Heilgymnastik -->
+                <div class="service-card" data-service="gymnastics">
+                    <div class="service-header">
+                        <h3 class="service-title">Heilgymnastik</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="service-content">
+                        <p>Bei der Heilgymnastik wird der Patient unter Anleitung von ausgebildeten Therapeuten aktiv an seiner Genesung beteiligt. Durch spezielle Übungen und Maßnahmen wird das Körperbewusstsein des Patienten erhöht und die Funktionalität wiederhergestellt.</p>
+                        <ul class="service-list">
+                            <li>Aktive Bewegungstherapie</li>
+                            <li>Funktionelle Übungen</li>
+                            <li>Haltungsschulung</li>
+                            <li>Körperbewusstseinstraining</li>
+                            <li>Kraftaufbau</li>
+                            <li>Ausdauertraining</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3: Elektrotherapien -->
+                <div class="service-card" data-service="electro">
+                    <div class="service-header">
+                        <h3 class="service-title">Elektrotherapien</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="service-content">
+                        <p>Therapeutische Anwendung verschiedener Stromformen zur Schmerzlinderung, Muskelstimulation und Nervenstimulation. Diese modernen Verfahren unterstützen den Heilungsprozess und verbessern die Funktionalität.</p>
+                        <ul class="service-list">
+                            <li>TENS (Transkutane elektrische Nervenstimulation)</li>
+                            <li>Interferenzstrom</li>
+                            <li>Ultraschall</li>
+                            <li>Iontophorese</li>
+                            <li>Magnetfeldtherapie</li>
+                            <li>Stoßwellentherapie</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 4: Sonstige Behandlungen -->
+                <div class="service-card" data-service="other">
+                    <div class="service-header">
+                        <h3 class="service-title">Sonstige Behandlungen</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="service-content">
+                        <p>Spezialisierte Therapien, die sich mit besonderen Problemen befassen und über Massage und therapeutische Übungen hinausgehen. Wir bieten ein umfassendes Spektrum moderner Behandlungsmethoden.</p>
+                        <ul class="service-list">
+                            <li>Kinesiotaping</li>
+                            <li>Wärme- und Kältetherapie</li>
+                            <li>Manuelle Therapie</li>
+                            <li>Gelenkmobilisation</li>
+                            <li>Narbenbehandlung</li>
+                            <li>Sportphysiotherapie</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <article id="action-module" class="content-module">
-        <div class="module-inner">
-            <h2 class="module-title">Kontakt & Ordination</h2>
-            <div class="action-buttons">
-                <a href="tel:+4317692991" class="action-btn primary">
-                    <span>Telefon: +43 1 769 29 91</span>
-                </a>
-                <a href="mailto:ordination@drcenik.at" class="action-btn secondary">
-                    <span>E-Mail schreiben</span>
-                </a>
+
+    <!-- ============================================ -->
+    <!-- ABOUT SECTION -->
+    <!-- ============================================ -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Über Dr. Fadime Cenik</h2>
+                <p class="section-subtitle">Fachkompetenz und persönliche Patientenbetreuung</p>
             </div>
-            <div class="contact-info">
-                <div class="info-item">
-                    <span>Kaiser-Ebersdorfer-Straße 328, 1110 Wien</span>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Dr. med. univ. Fadime Cenik</h3>
+                    <p><strong>Fachärztin für Physikalische Medizin und allgemeine Rehabilitation</strong></p>
+                    
+                    <p>Mit über 15 Jahren Erfahrung in der Rehabilitationsmedizin biete ich spezialisierte Behandlungen für Patienten mit Bewegungsapparat-Störungen, chronischen Schmerzen und funktionellen Einschränkungen.</p>
+                    
+                    <h4>Qualifikationen:</h4>
+                    <ul>
+                        <li>Medizinische Universität Wien</li>
+                        <li>Facharztdiplom in Physikalischer Medizin und Rehabilitation</li>
+                        <li>Kontinuierliche Fortbildung in modernen Therapieverfahren</li>
+                        <li>Spezialisierung auf innovative Schmerztherapie</li>
+                    </ul>
+                    
+                    <h4>Behandlungsphilosophie:</h4>
+                    <p>Der Mensch steht im Mittelpunkt meiner medizinischen Praxis. Ich kombiniere moderne medizinische Methoden mit persönlicher Patientenbetreuung durch einen ganzheitlichen Ansatz. Jeder Patient erhält einen individuellen Behandlungsplan, der auf seine spezifischen Bedürfnisse abgestimmt ist.</p>
                 </div>
-                <div class="info-item">
-                    <span>Mo-Fr: 06:30 - 19:00 Uhr</span>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Jahre Erfahrung</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Zufriedene Patienten</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Alle Kassen</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </article>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FAQ SECTION -->
+    <!-- ============================================ -->
+    <section id="faq" class="faq-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Häufig gestellte Fragen</h2>
+                <p class="section-subtitle">Finden Sie Antworten auf die häufigsten Fragen zu Terminen, Versicherungen und Behandlungsprozessen</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wie kann ich einen Termin buchen?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sie können uns telefonisch unter +43 1 769 29 91 anrufen oder eine E-Mail an office@drcenik.at senden. Unsere Ordinationszeiten sind Mo & Mi 15:00-18:00 und Di & Do 08:00-11:00. Termine zur Erstuntersuchung werden nach telefonischer Vereinbarung vergeben.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Werden die Kosten von der Krankenkasse übernommen?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, wir sind Kassenärztin und arbeiten mit allen österreichischen Krankenkassen zusammen: ÖGK, SVS, BVAEB und KFA. Die Kosten werden direkt mit der Krankenkasse abgerechnet. Sie benötigen eine Überweisung von Ihrem Hausarzt oder Facharzt.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wie lange dauert eine Behandlung?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Eine typische Behandlungssitzung dauert zwischen 30 und 60 Minuten, je nach Art der Therapie und Ihrem individuellen Behandlungsplan. Die genaue Dauer wird bei Ihrem ersten Termin festgelegt.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wie oft sollte ich zur Therapie kommen?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Die Häufigkeit der Therapiesitzungen hängt von Ihrer Diagnose und dem Schweregrad Ihrer Beschwerden ab. Typischerweise werden 1-3 Sitzungen pro Woche empfohlen. Ihr individueller Behandlungsplan wird bei der ersten Untersuchung erstellt.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Was sollte ich zum ersten Termin mitbringen?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Bitte bringen Sie mit: Ihre Versichertenkarte (e-card), die Überweisung von Ihrem Arzt, medizinische Berichte oder Befunde (falls vorhanden), ein eigenes Leintuch oder Handtuch für die Therapie, und bequeme Kleidung.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Gibt es Kontraindikationen für die Therapie?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Einige Erkrankungen oder Zustände können Kontraindikationen darstellen. Dies wird bei Ihrer Erstuntersuchung gründlich überprüft. Bitte informieren Sie uns über alle Ihre medizinischen Zustände und Medikamente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wie kann ich einen Termin absagen oder verschieben?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Bitte rufen Sie uns mindestens 24 Stunden vor Ihrem Termin an, um ihn abzusagen oder zu verschieben. Telefonisch unter +43 1 769 29 91 oder per E-Mail an office@drcenik.at.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Weswegen ist es notwendig, ein eigenes Leintuch zur Therapie mitzunehmen?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aus Hygienegründen und für Ihren persönlichen Komfort bitten wir Sie, ein eigenes Leintuch oder Handtuch mitzubringen. Dies gewährleistet die höchsten Hygienestandards und Ihr Wohlbefinden während der Behandlung.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONTACT SECTION -->
+    <!-- ============================================ -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Kontakt & Ordination</h2>
+                <p class="section-subtitle">Sprechen wir über Ihre Gesundheit</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-block">
+                        <h3>Adresse</h3>
+                        <p>Kaiser-Ebersdorfer-Straße 328<br>1110 Wien, Österreich</p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3>Telefon</h3>
+                        <p><a href="tel:+4317692991">+43 1 769 29 91</a></p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3>E-Mail</h3>
+                        <p><a href="mailto:office@drcenik.at">office@drcenik.at</a></p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3>Ordinationszeiten</h3>
+                        <p><strong>Mo & Mi:</strong> 15:00 - 18:00<br>
+                           <strong>Di & Do:</strong> 08:00 - 11:00</p>
+                        <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">Termine zur Erstuntersuchung nach telefonischer Vereinbarung</p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3>Therapiezeiten</h3>
+                        <p><strong>Mo:</strong> 07:00 - 19:00<br>
+                           <strong>Di, Mi, Do:</strong> 06:30 - 19:00<br>
+                           <strong>Fr:</strong> 06:30 - 17:00</p>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <a href="tel:+4317692991" class="btn btn-primary btn-large">Jetzt anrufen</a>
+                    <a href="mailto:office@drcenik.at" class="btn btn-secondary btn-large">E-Mail schreiben</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Fadime Cenik</h4>
+                    <p>Kassenärztin für Physikalische Medizin und allgemeine Rehabilitation</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Startseite</a></li>
+                        <li><a href="#services">Leistungen</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>Kaiser-Ebersdorfer-Straße 328<br>1110 Wien</p>
+                    <p><a href="tel:+4317692991">+43 1 769 29 91</a><br>
+                       <a href="mailto:office@drcenik.at">office@drcenik.at</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dr. Fadime Cenik. Alle Rechte vorbehalten.</p>
+                <div class="footer-links">
+                    <a href="pages/impressum.html">Impressum</a>
+                    <span class="divider">|</span>
+                    <a href="pages/datenschutz.html">Datenschutz</a>
+                    <span class="divider">|</span>
+                    <a href="pages/agb.html">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>

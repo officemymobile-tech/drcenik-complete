@@ -1,305 +1,228 @@
+// ============================================
+// Dr. Fadime Cenik - Main Application
+// Clean Code Architecture
+// ============================================
+
+// ============================================
+// HAMBURGER MENU FUNCTIONALITY
+// ============================================
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navMenu = document.getElementById('nav-menu');
+
+if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        navMenu.classList.toggle('mobile-open');
+    });
+}
+
+// Close menu when clicking on a link
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        navMenu.classList.remove('mobile-open');
+    });
+});
+
+// ============================================
+// SMOOTH SCROLL NAVIGATION
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// ============================================
+// SERVICE CARD ACCORDION
+// ============================================
+const serviceCards = document.querySelectorAll('.service-card');
+
+serviceCards.forEach(card => {
+    const header = card.querySelector('.service-header');
+    
+    header.addEventListener('click', () => {
+        // Close other cards
+        serviceCards.forEach(otherCard => {
+            if (otherCard !== card) {
+                otherCard.classList.remove('active');
+            }
+        });
+        
+        // Toggle current card
+        card.classList.toggle('active');
+    });
+});
+
+// ============================================
+// FAQ ACCORDION
+// ============================================
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+        // Close other items
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+            }
+        });
+        
+        // Toggle current item
+        item.classList.toggle('active');
+    });
+});
+
+// ============================================
+// INTERSECTION OBSERVER FOR ANIMATIONS
+// ============================================
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all sections for fade-in animation
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    observer.observe(section);
+});
+
+// ============================================
+// SCROLL INDICATOR
+// ============================================
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    
+    // Update any scroll indicator if needed
+    // This can be used for progress bars or other indicators
+});
+
+// ============================================
+// ACCESSIBILITY ENHANCEMENTS
+// ============================================
+
+// Add keyboard navigation for accordion items
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+        const target = e.target;
+        
+        if (target.classList.contains('service-header')) {
+            e.preventDefault();
+            target.click();
+        }
+        
+        if (target.classList.contains('faq-question')) {
+            e.preventDefault();
+            target.click();
+        }
+    }
+});
+
+// ============================================
+// PERFORMANCE OPTIMIZATION
+// ============================================
+
+// Lazy load images if needed
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// ============================================
+// INITIALIZATION
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Dr. Fadime Cenik - Website loaded successfully');
+    
+    // Ensure first service card is open by default
+    const firstServiceCard = document.querySelector('.service-card');
+    if (firstServiceCard) {
+        firstServiceCard.classList.add('active');
+    }
+});
+
+// ============================================
+// UTILITY FUNCTIONS
+// ============================================
+
 /**
- * Main Application Script
- * Dr. Cenik AI-Driven Medical Website
+ * Smooth scroll to element
+ * @param {string} selector - CSS selector of target element
+ * @param {number} offset - Offset in pixels
  */
-
-// ============================================
-// i18n System
-// ============================================
-class I18n {
-    constructor() {
-        this.translations = {};
-        this.currentLang = 'de';
-    }
-
-    async init() {
-        // Load all translations
-        const langs = ['de', 'tr', 'en'];
-        for (const lang of langs) {
-            try {
-                const response = await fetch(`i18n/${lang}.json`);
-                this.translations[lang] = await response.json();
-            } catch (e) {
-                console.error(`Failed to load ${lang} translations:`, e);
-            }
-        }
-
-        // Set initial language from UX engine
-        this.currentLang = window.uxEngine?.state.language || 'de';
-        this.applyTranslations();
-
-        // Listen for language changes
-        window.addEventListener('languageChange', (e) => {
-            this.currentLang = e.detail.language;
-            this.applyTranslations();
-        });
-    }
-
-    get(key) {
-        const keys = key.split('.');
-        let value = this.translations[this.currentLang];
-        
-        for (const k of keys) {
-            if (value && value[k]) {
-                value = value[k];
-            } else {
-                return key; // Return key if translation not found
-            }
-        }
-        
-        return value;
-    }
-
-    applyTranslations() {
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.dataset.i18n;
-            const translation = this.get(key);
-            if (translation && translation !== key) {
-                el.textContent = translation;
-            }
-        });
-
-        // Update HTML lang attribute
-        document.documentElement.lang = this.currentLang;
-
-        // Update active language button
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === this.currentLang);
-        });
-    }
-
-    setLanguage(lang) {
-        this.currentLang = lang;
-        window.uxEngine?.setLanguage(lang);
-        this.applyTranslations();
-    }
-}
-
-// ============================================
-// App Controller
-// ============================================
-class App {
-    constructor() {
-        this.i18n = new I18n();
-        this.init();
-    }
-
-    async init() {
-        // Wait for DOM
-        if (document.readyState === 'loading') {
-            await new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve));
-        }
-
-        // Initialize i18n
-        await this.i18n.init();
-
-        // Setup entry experience
-        this.setupEntry();
-
-        // Setup AI Orb
-        this.setupOrb();
-
-        // Setup modals
-        this.setupModals();
-
-        // Setup expertise cards
-        this.setupExpertiseCards();
-
-        // Start typing effect
-        this.startTypingEffect();
-
-        // Make i18n globally available
-        window.i18n = this.i18n;
-    }
-
-    // ============================================
-    // Entry Experience
-    // ============================================
-    setupEntry() {
-        const choiceCards = document.querySelectorAll('.choice-card');
-        
-        choiceCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const intent = card.dataset.intent;
-                this.handleIntentChoice(intent);
-            });
-        });
-    }
-
-    handleIntentChoice(intent) {
-        // Set intent in UX engine
-        window.uxEngine?.setIntent(intent);
-
-        // Transition to experience
-        window.motion?.transitionToExperience();
-    }
-
-    async startTypingEffect() {
-        const typingText = document.querySelector('.typing-text');
-        if (!typingText) return;
-
-        // Wait a bit for translations to load
-        await new Promise(resolve => setTimeout(resolve, 500));
-
-        const greeting = this.i18n.get('entry.greeting');
-        window.motion?.typeText(typingText, greeting);
-    }
-
-    // ============================================
-    // AI Orb
-    // ============================================
-    setupOrb() {
-        const orb = document.getElementById('ai-orb');
-        const orbCore = orb?.querySelector('.orb-core');
-        const orbOptions = orb?.querySelectorAll('.orb-option');
-
-        if (!orb || !orbCore) return;
-
-        // Toggle menu on click
-        orbCore.addEventListener('click', () => {
-            orb.classList.toggle('open');
-        });
-
-        // Handle option clicks
-        orbOptions?.forEach(option => {
-            option.addEventListener('click', () => {
-                const action = option.dataset.action;
-                this.handleOrbAction(action);
-                orb.classList.remove('open');
-            });
-        });
-
-        // Close on outside click
-        document.addEventListener('click', (e) => {
-            if (!orb.contains(e.target)) {
-                orb.classList.remove('open');
-            }
-        });
-    }
-
-    handleOrbAction(action) {
-        switch (action) {
-            case 'guide':
-                this.showGuide();
-                break;
-            case 'question':
-                this.openModal('question-modal');
-                break;
-            case 'simplify':
-                this.toggleSimplified();
-                break;
-            case 'language':
-                this.openModal('language-modal');
-                break;
-        }
-    }
-
-    showGuide() {
-        // Scroll to first unviewed section
-        const modules = document.querySelectorAll('.content-module');
-        for (const module of modules) {
-            if (!module.classList.contains('visible')) {
-                module.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                return;
-            }
-        }
-
-        // If all viewed, go to action
-        document.getElementById('action-module')?.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'center' 
-        });
-    }
-
-    toggleSimplified() {
-        const isSimplified = document.body.getAttribute('data-simplified') === 'true';
-        window.uxEngine?.toggleSimplified(!isSimplified);
-    }
-
-    // ============================================
-    // Modals
-    // ============================================
-    setupModals() {
-        // Language modal
-        const langModal = document.getElementById('language-modal');
-        const langBtns = langModal?.querySelectorAll('.lang-btn');
-
-        langBtns?.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.dataset.lang;
-                this.i18n.setLanguage(lang);
-                this.closeModal('language-modal');
-                
-                // Re-type greeting if on entry screen
-                const entry = document.getElementById('entry');
-                if (entry?.classList.contains('active')) {
-                    const typingText = document.querySelector('.typing-text');
-                    const greeting = this.i18n.get('entry.greeting');
-                    window.motion?.typeText(typingText, greeting);
-                }
-            });
-        });
-
-        // Close buttons
-        document.querySelectorAll('.modal-close').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const modal = btn.closest('.modal');
-                if (modal) {
-                    window.motion?.closeModal(modal);
-                }
-            });
-        });
-
-        // Close on overlay click
-        document.querySelectorAll('.modal-overlay').forEach(overlay => {
-            overlay.addEventListener('click', () => {
-                const modal = overlay.closest('.modal');
-                if (modal) {
-                    window.motion?.closeModal(modal);
-                }
-            });
-        });
-    }
-
-    openModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-            window.motion?.openModal(modal);
-        }
-    }
-
-    closeModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-            window.motion?.closeModal(modal);
-        }
-    }
-
-    // ============================================
-    // Expertise Cards
-    // ============================================
-    setupExpertiseCards() {
-        const cards = document.querySelectorAll('.expertise-card');
-
-        cards.forEach(card => {
-            const header = card.querySelector('.expertise-header');
-            
-            header?.addEventListener('click', () => {
-                // Close other cards
-                cards.forEach(c => {
-                    if (c !== card) {
-                        c.classList.remove('expanded');
-                    }
-                });
-
-                // Toggle current card
-                card.classList.toggle('expanded');
-            });
+function smoothScrollTo(selector, offset = 0) {
+    const element = document.querySelector(selector);
+    if (element) {
+        const top = element.offsetTop - offset;
+        window.scrollTo({
+            top: top,
+            behavior: 'smooth'
         });
     }
 }
 
-// ============================================
-// Initialize App
-// ============================================
-const app = new App();
+/**
+ * Toggle element visibility
+ * @param {string} selector - CSS selector of target element
+ */
+function toggleElement(selector) {
+    const element = document.querySelector(selector);
+    if (element) {
+        element.classList.toggle('hidden');
+    }
+}
+
+/**
+ * Add active class to element
+ * @param {string} selector - CSS selector of target element
+ */
+function setActive(selector) {
+    document.querySelectorAll(selector).forEach(el => {
+        el.classList.remove('active');
+    });
+    document.querySelector(selector).classList.add('active');
+}
+
+// Export functions for external use if needed
+window.DrCenik = {
+    smoothScrollTo,
+    toggleElement,
+    setActive
+};
