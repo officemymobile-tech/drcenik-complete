@@ -1,101 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dr. Fadime Cenik - Specialist in Physical Medicine and General Rehabilitation in Vienna. Specialized therapies with modern technology.">
-  <title>Physical Medicine & Rehabilitation Vienna | Dr. Fadime Cenik</title>
+  <meta name="description" content="Dr. Fadime Cenik - Fachärztin für Physikalische Medizin & Rehabilitation in Wien. Spezialisierte Therapien mit modernen Technologien.">
+  <meta property="og:title" content="Dr. Fadime Cenik | Physikalische Medizin Wien">
+  <meta property="og:description" content="Spezialisierte Therapien für Bewegungsapparat-Störungen und Schmerzbehandlung.">
+  <meta property="og:locale" content="de_AT">
+  <title>Dr. Fadime Cenik | Physikalische Medizin & Rehabilitation Wien</title>
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
   <header class="header" id="header">
     <div class="header-inner">
       <div class="logo-section">
-        <a href="/en/" class="logo">
-          <span class="logo-text">Dr. Cenik</span>
-          <span class="logo-subtitle">Physikalische Medizin</span>
+        <a href="/de/" class="logo">
+          <span class="logo-text">Dr. Fadime Cenik</span>
+          <span class="logo-subtitle">Kassenärztin</span>
         </a>
       </div>
       
       <nav class="navigation">
-        <a href="/en/index.html" class="nav-link active">Home</a>
-        <a href="/en/therapies.html" class="nav-link ">Therapies</a>
-        <a href="/en/r-force.html" class="nav-link ">R-Force</a>
-        <a href="/en/news.html" class="nav-link ">News</a>
-        <a href="/en/faq.html" class="nav-link ">FAQ</a>
-        <a href="/en/about.html" class="nav-link ">About</a>
-        <a href="/en/contact.html" class="nav-link ">Contact</a>
+        <a href="/de/" class="nav-link active">Startseite</a>
+        <a href="/de/therapies.html" class="nav-link">Therapieangebot</a>
+        <a href="/de/r-force.html" class="nav-link">R-Force</a>
+        <a href="/de/news.html" class="nav-link">Wissen & News</a>
+        <a href="/de/faq.html" class="nav-link">Häufige Fragen</a>
+        <a href="/de/about.html" class="nav-link">Über uns</a>
+        <a href="/de/contact.html" class="nav-link">Kontakt</a>
       </nav>
-      
+
       <div class="header-actions">
         <a href="tel:+43176929991" class="phone-link">📞 01 / 769 29 91</a>
         <div class="language-switcher">
-          <a href="/de/index.html" class="lang-link" aria-label="DE">DE</a>
-          <a href="/tr/index.html" class="lang-link" aria-label="TR">TR</a>
-          <button class="lang-btn active" aria-label="EN">EN</button>
+          <button class="lang-btn active" data-lang="de">DE</button>
+          <a href="/tr/" class="lang-link">TR</a>
+          <a href="/en/" class="lang-link">EN</a>
         </div>
       </div>
-      
-      <button class="hamburger-menu" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+
+      <button class="hamburger-menu" aria-label="Menü">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="page-hero">
-      <div class="section-container">
-        <h1>Physical Medicine & Rehabilitation Vienna</h1>
-        <p class="page-subtitle">Dr. Fadime Cenik - Specialist in Physical Medicine and General Rehabilitation in Vienna. Specialized therapies with modern technology.</p>
-      </div>
-    </section>
+    <!-- HERO SECTION -->
+    <section class="hero-luxury">
+      <div class="hero-luxury-container">
+        <div class="hero-luxury-left">
+          <div class="hero-badge">IHRE GESUNDHEIT IM MITTELPUNKT</div>
+          <h1>Physikalische Medizin & Rehabilitation Wien</h1>
+          <p class="hero-subtitle">Spezialisierte Therapien für Bewegungsapparat-Störungen, Schmerzbehandlung und funktionelle Wiederherstellung mit modernsten Technologien.</p>
+          
+          <blockquote class="hero-quote">
+            „Der Mensch muss stets im Mittelpunkt aller medizinischen, ökonomischen und fachlichen Bemühungen stehen."
+          </blockquote>
 
-    <section class="page-content">
-      <div class="section-container">
-        <div class="content-wrapper">
-          <p>Detailed content for index page in EN will be displayed here.</p>
+          <div class="hero-buttons">
+            <a href="/de/contact.html" class="btn btn-primary">Termin online buchen</a>
+            <a href="/de/therapies.html" class="btn btn-secondary">Mehr erfahren</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img src="/images/hero-doctor-premium.jpg" alt="Dr. Fadime Cenik - Fachärztin" class="hero-image" loading="lazy">
+          <div class="hero-image-overlay">
+            <h3>Dr. med. univ.</h3>
+            <h2>Fadime Cenik</h2>
+            <p class="hero-specialization">Fachärztin für Physikalische Medizin und allgemeine Rehabilitation</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- FEATURED SERVICES -->
+    <section class="featured-services">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>Unser Therapieangebot</h2>
+          <p>Spezialisierte Behandlungen für optimale Gesundheit und Funktionalität</p>
+        </div>
+
+        <div class="featured-grid">
+          <div class="featured-card">
+            <div class="featured-icon">💆</div>
+            <h3>Fachkompetenz</h3>
+            <p>Spezialisierte Therapien für Bewegungsapparat-Störungen, Schmerzbehandlung und funktionelle Wiederherstellung mit modernsten Technologien und evidenzbasierten Methoden.</p>
+            <a href="/de/therapies.html" class="featured-link">Mehr erfahren →</a>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-icon">🎓</div>
+            <h3>Akademisch</h3>
+            <p>MedUni Wien, Facharztdiplom, kontinuierliche Fortbildung</p>
+            <a href="/de/about.html" class="featured-link">Mehr erfahren →</a>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-icon">📍</div>
+            <h3>Ordination in Wien</h3>
+            <p>Wien 11, Kaiser-Ebersdorfer-Straße 328</p>
+            <a href="/de/contact.html" class="featured-link">Mehr erfahren →</a>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-icon">⚡</div>
+            <h3>R-Force Technologie</h3>
+            <p>Revolutionäre Therapiemethode mit wissenschaftlich bewiesener Wirksamkeit für schnellere Heilung und bessere Ergebnisse.</p>
+            <a href="/de/r-force.html" class="featured-link">Mehr erfahren →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- R-FORCE TEASER -->
+    <section class="rforce-teaser">
+      <div class="section-container">
+        <div class="rforce-teaser-content">
+          <div class="rforce-teaser-text">
+            <h2>R-Force Technologie</h2>
+            <p>Revolutionäre Therapiemethode mit wissenschaftlich bewiesener Wirksamkeit für schnellere Heilung und bessere Ergebnisse.</p>
+            <div class="rforce-benefits">
+              <div class="benefit-item">✓ Schnellere Heilung</div>
+              <div class="benefit-item">✓ Reduzierte Schmerzen</div>
+              <div class="benefit-item">✓ Verbesserte Muskelkraft</div>
+              <div class="benefit-item">✓ Wissenschaftlich nachgewiesen</div>
+            </div>
+            <a href="/de/r-force.html" class="btn btn-primary">R-Force entdecken</a>
+          </div>
+          <div class="rforce-teaser-image">
+            <img src="/images/hero-clinic-luxury.jpg" alt="R-Force Technologie in der Klinik" class="teaser-image" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST ELEMENTS -->
+    <section class="trust-section">
+      <div class="section-container">
+        <h2>Warum Dr. Fadime Cenik wählen?</h2>
+        
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-icon">🎓</div>
+            <h3>Akademische Exzellenz</h3>
+            <p>MedUni Wien Diplom, Facharztdiplom, kontinuierliche Fortbildung in modernen Therapiemethoden.</p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">🏥</div>
+            <h3>Kassenärztin</h3>
+            <p>Alle österreichischen Krankenkassen werden akzeptiert (ÖGK, SVS, BVAEB, KFA).</p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">⚙️</div>
+            <h3>Moderne Technologie</h3>
+            <p>Neueste medizinische Geräte und innovative Therapiemethoden für optimale Ergebnisse.</p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">👥</div>
+            <h3>Patientenorientiert</h3>
+            <p>Individuelle Behandlungspläne, die auf die speziellen Bedürfnisse jedes Patienten abgestimmt sind.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
     <section class="cta-section">
       <div class="section-container">
-        <h2>Ready for your health?</h2>
-        <div class="cta-buttons">
-          <a href="/en/contact.html" class="btn btn-primary btn-large">Book Appointment</a>
-          <a href="/en/faq.html" class="btn btn-secondary btn-large">FAQ</a>
+        <div class="cta-content">
+          <h2>Bereit für Ihre Gesundheit?</h2>
+          <p>Vereinbaren Sie noch heute einen Termin mit Dr. Fadime Cenik und erleben Sie hochwertige medizinische Versorgung in Wien.</p>
+          <div class="cta-buttons">
+            <a href="/de/contact.html" class="btn btn-primary btn-large">Termin vereinbaren</a>
+            <a href="/de/faq.html" class="btn btn-secondary btn-large">Häufige Fragen</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-section">
-          <h3>Contact</h3>
-          <p><strong>Phone:</strong> <a href="tel:+43176929991">01 / 769 29 91</a></p>
-          <p><strong>Email:</strong> <a href="mailto:office@drcenik.at">office@drcenik.at</a></p>
+          <h3>Kontakt</h3>
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+43176929991">01 / 769 29 91</a><br>
+            <strong>E-Mail:</strong> <a href="mailto:office@drcenik.at">office@drcenik.at</a>
+          </p>
         </div>
+
         <div class="footer-section">
-          <h3>Address</h3>
-          <p>Kaiser-Ebersdorfer-Straße 328<br>1110 Vienna, Austria</p>
+          <h3>Adresse</h3>
+          <p>
+            Kaiser-Ebersdorfer-Straße 328<br>
+            1110 Wien, Österreich
+          </p>
         </div>
+
+        <div class="footer-section">
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Mo & Mi: 15:00 - 18:00<br>
+            Di & Do: 08:00 - 11:00<br>
+            Fr: Nach Vereinbarung
+          </p>
+        </div>
+
         <div class="footer-section">
           <h3>Navigation</h3>
           <ul>
-            <li><a href="/en/">Home</a></li>
-            <li><a href="/en/therapies.html">Therapies</a></li>
-            <li><a href="/en/r-force.html">R-Force</a></li>
-            <li><a href="/en/faq.html">FAQ</a></li>
+            <li><a href="/de/">Startseite</a></li>
+            <li><a href="/de/therapies.html">Therapieangebot</a></li>
+            <li><a href="/de/r-force.html">R-Force</a></li>
+            <li><a href="/de/news.html">Wissen & News</a></li>
+            <li><a href="/de/faq.html">Häufige Fragen</a></li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 Dr. Fadime Cenik. All rights reserved.</p>
+        <p>&copy; 2026 Dr. Fadime Cenik. Alle Rechte vorbehalten.</p>
       </div>
     </div>
   </footer>
