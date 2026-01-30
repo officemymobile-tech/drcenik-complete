@@ -3,331 +3,377 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dr. Fadime Cenik - Fizik Tıp ve Rehabilitasyon Uzmanı. Viyana 1110'da. Tüm sigorta şirketleri (ÖGK, SVS, BVAEB, KFA).">
-    <meta name="keywords" content="Fizik Tıp, Rehabilitasyon, Viyana, Doktor, Terapi">
+    <meta name="description" content="Dr. Fadime Cenik - Fizik Tedavi ve Rehabilitasyon Uzmanı, Viyana'da Kasa Doktoru. Tüm Sigortalar (ÖGK, SVS, BVAEB, KFA).">
+    <meta name="keywords" content="Fizik Tedavi, Rehabilitasyon, Viyana, Kasa Doktoru, Masaj, Egzersiz Terapisi">
     <meta name="author" content="Dr. Fadime Cenik">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Dr. Fadime Cenik | Fizik Tedavi & Rehabilitasyon Uzmanı Viyana">
+    <meta property="og:description" content="Hareket Sistemi Bozuklukları, Ağrı Tedavisi ve Fonksiyonel İyileştirme için Uzmanlaşmış Tedaviler.">
+    <meta property="og:type" content="website">
     <meta property="og:locale" content="tr_TR">
-    <title>Dr. Fadime Cenik | Fizik Tıp & Rehabilitasyon Viyana</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#1F2A2E">
+    <title>Dr. Fadime Cenik | Fizik Tedavi & Rehabilitasyon Uzmanı Viyana</title>
+    <link rel="canonical" href="https://drcenik.at/tr/">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header class="header sticky">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <div class="logo-section">
+                <img src="/images/logo.svg" alt="Dr. Fadime Cenik Logosu" class="logo-image">
+                <div class="logo-text">
                     <h1>Dr. Fadime Cenik</h1>
-                    <p class="tagline">Fizik Tıp & Rehabilitasyon</p>
-                </div>
-                <nav class="nav">
-                    <a href="#home" class="nav-link">Ana Sayfa</a>
-                    <a href="#services" class="nav-link">Hizmetler</a>
-                    <a href="#about" class="nav-link">Hakkında</a>
-                    <a href="#faq" class="nav-link">SSS</a>
-                    <a href="#contact" class="nav-link">İletişim</a>
-                </nav>
-                <div class="header-actions">
-                    <a href="tel:+4317692991" class="btn btn-primary">📞 Ara</a>
-                    <div class="language-switcher">
-                        <a href="../de/" class="lang-btn">DE</a>
-                        <button class="lang-btn active">TR</button>
-                        <a href="../en/" class="lang-btn">EN</a>
-                    </div>
+                    <p>Kasa Doktoru</p>
                 </div>
             </div>
+
+            <nav class="nav" id="main-nav">
+                <a href="#home" class="nav-link">Ana Sayfa</a>
+                <a href="#services" class="nav-link">Hizmetler</a>
+                <a href="#about" class="nav-link">Hakkımızda</a>
+                <a href="#faq" class="nav-link">SSS</a>
+                <a href="#contact" class="nav-link">İletişim</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+4317692991" class="cta-btn">📞 Ara</a>
+                <div class="lang-switcher">
+                    <a href="/de/" class="lang-btn" aria-label="Deutsch">DE</a>
+                    <button class="lang-btn active" aria-label="Türkçe">TR</button>
+                    <a href="/en/" class="lang-btn" aria-label="English">EN</a>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
             <div class="hero-content">
-                <div class="badge">Tüm Sigorta Şirketleri - ÖGK, SVS, BVAEB, KFA</div>
-                <h2 class="hero-title">Sağlığınız İçin Uzmanlaşmış Tedaviler</h2>
-                <p class="hero-subtitle">Viyana'da Fizik Tıp ve Rehabilitasyon Uzmanı</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-large">Randevu Al</a>
+                <div class="hero-badge">Kasa Doktoru – Tüm Sigortalar (ÖGK, SVS, BVAEB, KFA)</div>
+                <h1>Sağlığınız İçin Uzmanlaşmış Tedaviler</h1>
+                <p class="subtitle">Viyana'da Fizik Tedavi ve Rehabilitasyon Uzmanı</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Randevu Alın</a>
                     <a href="#services" class="btn btn-secondary">Hizmetleri Keşfet</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Hizmetler</h2>
-            <p class="section-subtitle">Modern ve etkili tedavi yöntemleri</p>
-            
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <h2>Hizmetler</h2>
+                <p>Modern Tedavi Yöntemlerinin Kapsamlı Yelpazesi</p>
+            </div>
+
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Masaj Terapileri</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                <div class="service-card" data-service="massage">
+                    <h3><span class="toggle-icon">+</span> Masaj Terapileri</h3>
                     <div class="service-content">
                         <ul>
-                            <li><strong>Klasik Masaj:</strong> Rahatlama ve kan dolaşımını artırma</li>
-                            <li><strong>Lenf Drenajı:</strong> Şişlik ve ödem tedavisi</li>
-                            <li><strong>Tetik Nokta Terapisi:</strong> Kas gerilmesi tedavisi</li>
-                            <li><strong>Bağ Dokusu Masajı:</strong> Doku esnekliğini iyileştirme</li>
-                            <li><strong>Ayak Refleks Masajı:</strong> Bütünsel tedavi yöntemi</li>
-                            <li><strong>Dorn-Breuss Masajı:</strong> Nazik omurga tedavisi</li>
+                            <li><strong>Klasik Masaj:</strong> Rahatlama ve Dolaşım Iyileştirmesi</li>
+                            <li><strong>Lenf Drenajı:</strong> Şişlik ve Ödem Tedavisi</li>
+                            <li><strong>Tetik Nokta Terapisi:</strong> Kas Gerginliği Tedavisi</li>
+                            <li><strong>Bağ Doku Masajı:</strong> Doku Esnekliğini Geliştirme</li>
+                            <li><strong>Ayak Refleks Masajı:</strong> Refleks Bölgeleri Aracılığıyla Bütünsel Tedavi</li>
+                            <li><strong>Dorn-Breuss Masajı:</strong> Yumuşak Omurga Tedavisi</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Fizyoterapı & Hareket Terapisi</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                <div class="service-card" data-service="gymnastics">
+                    <h3><span class="toggle-icon">+</span> Egzersiz Terapisi & Hareket</h3>
                     <div class="service-content">
                         <ul>
-                            <li><strong>Aktif Hareket Terapisi:</strong> Güçlendirme ve mobilizasyon</li>
-                            <li><strong>Vücut Farkındalığı Eğitimi:</strong> Vücut algısını iyileştirme</li>
-                            <li><strong>Fonksiyonel Egzersizler:</strong> Günlük hareketler için özel antrenman</li>
-                            <li><strong>Postür Eğitimi:</strong> Duruş hatalarının önlenmesi</li>
-                            <li><strong>Solunum Egzersizleri:</strong> Rahatlama için solunum teknikleri</li>
-                            <li><strong>Pilates & Çekirdek Antrenmanı:</strong> Gövde stabilizasyonu</li>
+                            <li><strong>Aktif Hareket Terapisi:</strong> Güçlendirme ve Mobilizasyon</li>
+                            <li><strong>Vücut Farkındalık Eğitimi:</strong> Vücut Algısını Geliştirme</li>
+                            <li><strong>Fonksiyonel Egzersizler:</strong> Günlük Hareketler İçin Özel Antrenman</li>
+                            <li><strong>Postür Eğitimi:</strong> Postür Bozukluklarının Önlenmesi</li>
+                            <li><strong>Nefes Egzersizleri:</strong> Rahatlama Teknikler</li>
+                            <li><strong>Pilates & Çekirdek Antrenmanı:</strong> Gövde Kas Stabilizasyonu</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Elektroterapiler</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                <div class="service-card" data-service="electro">
+                    <h3><span class="toggle-icon">+</span> Elektrik Terapileri</h3>
                     <div class="service-content">
                         <ul>
-                            <li><strong>TENS:</strong> Ağrı kesici elektrik uyarı</li>
-                            <li><strong>Girişimsel Akım:</strong> Derin ağrı tedavisi</li>
-                            <li><strong>Ultrason Terapisi:</strong> Doku yenilenmesi</li>
-                            <li><strong>İyontophoresis:</strong> İlaç uygulaması</li>
-                            <li><strong>Galvanik Terapi:</strong> Kan dolaşımını artırma</li>
-                            <li><strong>Yüksek Frekans Terapisi:</strong> Modern ısı terapisi</li>
+                            <li><strong>TENS:</strong> Transkutan Elektrik Sinir Stimülasyonu Ağrı Giderme</li>
+                            <li><strong>Girişim Akımı:</strong> Derin Etkili Ağrı Tedavisi</li>
+                            <li><strong>Ultrason Terapisi:</strong> Doku Yenilenmesi</li>
+                            <li><strong>İyontophoresis:</strong> Elektrik Aracılığıyla İlaç Uygulaması</li>
+                            <li><strong>Galvanik Terapi:</strong> Dolaşım Iyileştirmesi</li>
+                            <li><strong>Yüksek Frekans Terapisi:</strong> Modern Isı Terapisi</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Diğer Tedaviler</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                <div class="service-card" data-service="other">
+                    <h3><span class="toggle-icon">+</span> Diğer Tedaviler</h3>
                     <div class="service-content">
                         <ul>
-                            <li><strong>Şok Dalga Terapisi:</strong> Yüksek enerjili dalgalarla ağrı tedavisi</li>
-                            <li><strong>Kinezyo Taping:</strong> Elastik bant desteği</li>
-                            <li><strong>Sıcak ve Soğuk Terapisi:</strong> Termal tedavi yöntemleri</li>
-                            <li><strong>Manuel Terapi:</strong> Hedefli eklem tedavisi</li>
-                            <li><strong>Akupunktur:</strong> Geleneksel Çin tıbbı yöntemi</li>
-                            <li><strong>Danışmanlık & Koruma:</strong> Kişisel sağlık danışmanlığı</li>
+                            <li><strong>Şok Dalga Terapisi:</strong> Ağrı Tedavisi için Yüksek Enerjili Dalgalar</li>
+                            <li><strong>Kinesiyo Bandı:</strong> Kas ve Eklem Desteği için Elastik Bant</li>
+                            <li><strong>Sıcak ve Soğuk Terapi:</strong> Termal Tedavi Yöntemleri</li>
+                            <li><strong>Manuel Terapi:</strong> Hedefli Eklem Tedavisi</li>
+                            <li><strong>Akupunktur:</strong> Geleneksel Çin Tedavi Yöntemi</li>
+                            <li><strong>Danışmanlık & Önleme:</strong> Bireysel Sağlık Danışmanlığı</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about">
-        <div class="container">
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2>Dr. Fadime Cenik Hakkında</h2>
+                <p>Deneyim, Uzmanlık ve Hasta Odaklı Yaklaşım</p>
+            </div>
+
             <div class="about-grid">
-                <div class="about-content">
-                    <h2>Dr. Fadime Cenik Hakkında</h2>
-                    <p>Dr. Fadime Cenik, Viyana'da uzun yıllara dayanan tecrübesiyle Fizik Tıp ve Rehabilitasyon Uzmanıdır.</p>
+                <div class="about-text">
+                    <p>Dr. Fadime Cenik, Viyana'da uzun yıllar deneyime sahip Fizik Tedavi ve Rehabilitasyon Uzmanıdır.</p>
+                    
                     <h3>Nitelikler</h3>
                     <ul>
-                        <li>Fizik Tıp ve Rehabilitasyon Uzmanı</li>
-                        <li>Ağrı tedavisi ve fonksiyonel iyileştirmede uzmanlaşma</li>
-                        <li>Modern tedavi yöntemlerinde geniş deneyim</li>
-                        <li>Tüm sigorta şirketleriyle anlaşmalı doktor</li>
+                        <li>Fizik Tedavi ve Rehabilitasyon Uzmanı</li>
+                        <li>Ağrı Tedavisi ve Fonksiyonel İyileştirme Konusunda Uzmanlaşmış</li>
+                        <li>Modern Tedavi Yöntemleri Konusunda Geniş Deneyim</li>
+                        <li>Tüm Sigorta Şirketleriyle Sözleşmeli Kasa Doktoru</li>
                     </ul>
+
                     <h3>Tedavi Felsefesi</h3>
-                    <p>Tedavinin merkezinde hasta vardır. Her hastaya özel tedavi planları hazırlanarak, bireyin ihtiyaçlarına göre uyarlanmış modern ve kanıtlanmış tedavi yöntemleri uygulanır.</p>
+                    <p>Tedavinin merkezinde hasta bulunur. Modern tıbbi teknikler ve kanıtlanmış tedavi yöntemlerinin kombinasyonu aracılığıyla, her hastanın özel ihtiyaçlarına uyarlanmış bireysel tedavi planları oluşturulur.</p>
                 </div>
-                <div class="about-image">
-                    <div class="placeholder">👨‍⚕️</div>
+
+                <div class="doctor-profile">
+                    <div class="doctor-profile-image">👨‍⚕️</div>
+                    <h3>Dr. Fadime Cenik</h3>
+                    <p class="title">Fizik Tedavi ve Rehabilitasyon Uzmanı</p>
+                    <p>Kasa Doktoru – Tüm Sigortalar</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2 class="section-title">Sık Sorulan Sorular</h2>
-            
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="section-header">
+                <h2>Sıkça Sorulan Sorular</h2>
+                <p>Önemli Sorularınıza Yanıtlar</p>
+            </div>
+
             <div class="faq-list">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Randevu nasıl alabilirim?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Randevu nasıl alabilirim?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>+43 1 769 29 91 numarasından telefonla randevu alabilirsiniz. Esnek randevu saatleri sunuyoruz.</p>
+                        <p>Telefon numarasından <strong>+43 1 769 29 91</strong> randevu alabilirsiniz. Esnek randevu saatleri sunuyoruz ve sizi kısa sürede randevu vermeye çalışırız.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Hangi sigorta şirketleri kabul edilir?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Hangi Sigorta Şirketleri Kabul Edilir?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Tüm sigorta şirketleriyle anlaşmalı doktorum: ÖGK, SVS, BVAEB ve KFA. Lütfen e-kartınızı getirin.</p>
+                        <p>Kasa doktoru olarak tüm sigorta şirketlerini kabul ederiz: <strong>ÖGK, SVS, BVAEB ve KFA</strong>. Lütfen muayeneye e-kartınızı getirin.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>İlk muayeneye ne getirmeliyim?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        İlk muayeneye ne getirmeli?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>E-kartınız, geçerli kimlik belgeniz ve varsa tıbbi belgelerinizi (röntgen, raporlar) getirin.</p>
+                        <p>Lütfen e-kartınızı, geçerli bir kimlik belgesi ve varsa tıbbi belgeleri (röntgen, raporlar) getirin.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Bir tedavi ne kadar sürer?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Bir tedavi ne kadar sürer?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Tipik bir tedavi 30-60 dakika sürer. Kesin süre randevu alırken belirtilir.</p>
+                        <p>Tipik bir tedavi <strong>30-60 dakika</strong> sürer, tedavi türü ve durumunuza bağlı olarak. Kesin süre randevu sırasında belirtilir.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Doktor tavsiyesi gerekli mi?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Doktor tavsiyesi gerekli mi?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Sigorta hizmetleri için genellikle doktor tavsiyesi gereklidir. Özel hizmetler tavsiye olmadan da alınabilir.</p>
+                        <p>Sigorta hizmetleri için genellikle aile hekimi veya uzman doktor tavsiyesi gereklidir. Özel hizmetler tavsiye olmadan da mümkündür.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Klinik nasıl ulaşılır?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Muayenehane nasıl ulaşılır?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Kaiser-Ebersdorfer-Straße 328, 1110 Viyana. Toplu taşıma (U3, tramvay) ile kolay erişilebilir.</p>
+                        <p>Muayenehane <strong>Kaiser-Ebersdorfer-Straße 328, 1110 Viyana</strong> adresindedir. Toplu taşıma (U3, Tramvay) ile kolayca ulaşılabilir.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Hangi ödeme yöntemleri kabul edilir?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Hangi Ödeme Yöntemleri Kabul Edilir?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Nakit, kart ve banka transferi kabul edilir. Sigorta hizmetleri doğrudan sigorta şirketiyle faturalandırılır.</p>
+                        <p>Nakit, Kart Ödeme ve Banka Transferi kabul ederiz. Sigorta hizmetleri doğrudan sigorta şirketiniz tarafından ödenir.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Hediye çeki var mı?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Hediye Çeki Sunuyor musunuz?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Evet, masaj ve terapi seansları için hediye çekleri sunuyoruz. Daha fazla bilgi için bize ulaşın.</p>
+                        <p>Evet, masaj ve terapi seansları için hediye çekleri sunuyoruz. Daha fazla bilgi için lütfen bizimle iletişime geçin.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">İletişim & Çalışma Saatleri</h2>
-            
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2>İletişim & Çalışma Saatleri</h2>
+                <p>Ziyaretinizi Bekliyoruz</p>
+            </div>
+
             <div class="contact-grid">
                 <div class="contact-card">
-                    <h3>📞 Telefon</h3>
-                    <a href="tel:+4317692991" class="contact-link">+43 1 769 29 91</a>
+                    <div class="contact-icon">📞</div>
+                    <h3>Telefon</h3>
+                    <p><a href="tel:+4317692991">+43 1 769 29 91</a></p>
                 </div>
+
                 <div class="contact-card">
-                    <h3>📧 E-Posta</h3>
-                    <a href="mailto:ordination@drcenik.at" class="contact-link">ordination@drcenik.at</a>
+                    <div class="contact-icon">📧</div>
+                    <h3>E-Posta</h3>
+                    <p><a href="mailto:ordination@drcenik.at">ordination@drcenik.at</a></p>
                 </div>
+
                 <div class="contact-card">
-                    <h3>📍 Adres</h3>
+                    <div class="contact-icon">📍</div>
+                    <h3>Adres</h3>
                     <p>Kaiser-Ebersdorfer-Straße 328<br>1110 Viyana</p>
                 </div>
             </div>
 
-            <div class="hours">
-                <h3>Çalışma Saatleri</h3>
+            <div class="hours-section">
+                <h3>Muayenehane Saatleri</h3>
                 <table class="hours-table">
-                    <tr>
-                        <td>Pazartesi</td>
-                        <td>15:00 - 18:00</td>
-                    </tr>
-                    <tr>
-                        <td>Salı</td>
-                        <td>08:00 - 11:00</td>
-                    </tr>
-                    <tr>
-                        <td>Çarşamba</td>
-                        <td>15:00 - 18:00</td>
-                    </tr>
-                    <tr>
-                        <td>Perşembe</td>
-                        <td>08:00 - 11:00</td>
-                    </tr>
-                    <tr>
-                        <td>Cuma</td>
-                        <td>Randevu ile</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Gün</th>
+                            <th>Saat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pazartesi</td>
+                            <td>15:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Salı</td>
+                            <td>08:00 - 11:00</td>
+                        </tr>
+                        <tr>
+                            <td>Çarşamba</td>
+                            <td>15:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Perşembe</td>
+                            <td>08:00 - 11:00</td>
+                        </tr>
+                        <tr>
+                            <td>Cuma</td>
+                            <td>Randevu Üzerine</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
-            <div class="cta-box">
-                <h3>Randevu Al</h3>
-                <p>Bize telefon veya e-posta ile ulaşarak randevu alabilirsiniz.</p>
-                <a href="tel:+4317692991" class="btn btn-large">Hemen Ara</a>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="tel:+4317692991" class="btn btn-primary">Hemen Ara</a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="footer">
-        <div class="container">
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>Klinik</h4>
-                    <p>Dr. Fadime Cenik<br>Fizik Tıp Uzmanı<br>Kaiser-Ebersdorfer-Straße 328<br>1110 Viyana</p>
-                </div>
-                <div class="footer-section">
-                    <h4>İletişim</h4>
-                    <p>Telefon: +43 1 769 29 91<br>E-Posta: ordination@drcenik.at</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Linkler</h4>
+                    <h4>Navigasyon</h4>
                     <ul>
                         <li><a href="#home">Ana Sayfa</a></li>
                         <li><a href="#services">Hizmetler</a></li>
-                        <li><a href="#about">Hakkında</a></li>
+                        <li><a href="#about">Hakkımızda</a></li>
                         <li><a href="#faq">SSS</a></li>
+                        <li><a href="#contact">İletişim</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
                     <h4>Yasal</h4>
                     <ul>
-                        <li><a href="/impressum.html">Yasal Uyarı</a></li>
-                        <li><a href="/datenschutz.html">Gizlilik</a></li>
-                        <li><a href="/agb.html">Şartlar</a></li>
+                        <li><a href="/impressum.html">Künye</a></li>
+                        <li><a href="/datenschutz.html">Gizlilik Politikası</a></li>
+                        <li><a href="/agb.html">Kullanım Koşulları</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li><a href="tel:+4317692991">+43 1 769 29 91</a></li>
+                        <li><a href="mailto:ordination@drcenik.at">ordination@drcenik.at</a></li>
+                        <li>Kaiser-Ebersdorfer-Str. 328<br>1110 Viyana</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Diller</h4>
+                    <ul>
+                        <li><a href="/de/">Deutsch</a></li>
+                        <li><a href="/tr/">Türkçe</a></li>
+                        <li><a href="/en/">English</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 Dr. Fadime Cenik. Tüm hakları saklıdır.</p>
+                <p>&copy; 2024 Dr. Fadime Cenik. Tüm Hakları Saklıdır. | Viyana'da Fizik Tedavi & Rehabilitasyon Uzmanı</p>
             </div>
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <!-- JavaScript -->
+    <script src="/js/main.js" defer></script>
 </body>
 </html>

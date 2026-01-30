@@ -4,72 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Dr. Fadime Cenik - Kassenärztin für Physikalische Medizin und allgemeine Rehabilitation in Wien 1110. Alle Kassen (ÖGK, SVS, BVAEB, KFA).">
-    <meta name="keywords" content="Physikalische Medizin, Rehabilitation, Wien, Kassenärztin, Therapie, Dr. Cenik">
+    <meta name="keywords" content="Physikalische Medizin, Rehabilitation, Wien, Kassenärztin, Therapie, Dr. Cenik, Massage, Heilgymnastik">
     <meta name="author" content="Dr. Fadime Cenik">
-    <meta property="og:title" content="Dr. Fadime Cenik | Physikalische Medizin & Rehabilitation Wien">
-    <meta property="og:description" content="Spezialisierte Therapien für Bewegungsapparat-Störungen, Schmerzbehandlung und funktionelle Wiederherstellung.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Dr. Fadime Cenik | Kassenärztin für Physikalische Medizin & Rehabilitation Wien">
+    <meta property="og:description" content="Spezialisierte Therapien für Bewegungsapparat-Störungen, Schmerzbehandlung und funktionelle Wiederherstellung in Wien.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_AT">
+    <meta name="theme-color" content="#1F2A2E">
     <title>Dr. Fadime Cenik | Kassenärztin für Physikalische Medizin & Rehabilitation Wien</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://drcenik.at/de/">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <header class="header sticky">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <div class="logo-section">
+                <img src="/images/logo.svg" alt="Dr. Fadime Cenik Logo" class="logo-image">
+                <div class="logo-text">
                     <h1>Dr. Fadime Cenik</h1>
-                    <p class="tagline">Physikalische Medizin & Rehabilitation</p>
-                </div>
-                <nav class="nav">
-                    <a href="#home" class="nav-link">Startseite</a>
-                    <a href="#services" class="nav-link">Leistungen</a>
-                    <a href="#about" class="nav-link">Über uns</a>
-                    <a href="#faq" class="nav-link">FAQ</a>
-                    <a href="#contact" class="nav-link">Kontakt</a>
-                </nav>
-                <div class="header-actions">
-                    <a href="tel:+4317692991" class="btn btn-primary">📞 Anrufen</a>
-                    <div class="language-switcher">
-                        <button class="lang-btn active">DE</button>
-                        <a href="../tr/" class="lang-btn">TR</a>
-                        <a href="../en/" class="lang-btn">EN</a>
-                    </div>
+                    <p>Kassenärztin</p>
                 </div>
             </div>
+
+            <nav class="nav" id="main-nav">
+                <a href="#home" class="nav-link">Startseite</a>
+                <a href="#services" class="nav-link">Leistungen</a>
+                <a href="#about" class="nav-link">Über uns</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Kontakt</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+4317692991" class="cta-btn">📞 Anrufen</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" aria-label="Deutsch">DE</button>
+                    <a href="/tr/" class="lang-btn" aria-label="Türkçe">TR</a>
+                    <a href="/en/" class="lang-btn" aria-label="English">EN</a>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
             <div class="hero-content">
-                <div class="badge">Kassenärztin – Alle Kassen (ÖGK, SVS, BVAEB, KFA)</div>
-                <h2 class="hero-title">Spezialisierte Therapien für Ihre Gesundheit</h2>
-                <p class="hero-subtitle">Fachärztin für Physikalische Medizin und allgemeine Rehabilitation in Wien</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-large">Termin vereinbaren</a>
+                <div class="hero-badge">Kassenärztin – Alle Kassen (ÖGK, SVS, BVAEB, KFA)</div>
+                <h1>Spezialisierte Therapien für Ihre Gesundheit</h1>
+                <p class="subtitle">Fachärztin für Physikalische Medizin und allgemeine Rehabilitation in Wien</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Termin vereinbaren</a>
                     <a href="#services" class="btn btn-secondary">Leistungen entdecken</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Leistungen</h2>
-            <p class="section-subtitle">Umfassendes Angebot an modernen Therapiemethoden</p>
-            
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <h2>Leistungen</h2>
+                <p>Umfassendes Angebot an modernen Therapiemethoden</p>
+            </div>
+
             <div class="services-grid">
-                <!-- Service 1: Massagetherapien -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Massagetherapien</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                <div class="service-card" data-service="massage">
+                    <h3><span class="toggle-icon">+</span> Massagetherapien</h3>
                     <div class="service-content">
                         <ul>
                             <li><strong>Klassische Massage:</strong> Zur Entspannung und Durchblutungsförderung</li>
@@ -82,12 +91,8 @@
                     </div>
                 </div>
 
-                <!-- Service 2: Heilgymnastik -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Heilgymnastik & Bewegungstherapie</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                <div class="service-card" data-service="gymnastics">
+                    <h3><span class="toggle-icon">+</span> Heilgymnastik & Bewegungstherapie</h3>
                     <div class="service-content">
                         <ul>
                             <li><strong>Aktive Bewegungstherapie:</strong> Zur Stärkung und Mobilisierung</li>
@@ -100,15 +105,11 @@
                     </div>
                 </div>
 
-                <!-- Service 3: Elektrotherapien -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Elektrotherapien</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                <div class="service-card" data-service="electro">
+                    <h3><span class="toggle-icon">+</span> Elektrotherapien</h3>
                     <div class="service-content">
                         <ul>
-                            <li><strong>TENS (Transkutane Elektrische Nervenstimulation):</strong> Zur Schmerzlinderung</li>
+                            <li><strong>TENS:</strong> Transkutane Elektrische Nervenstimulation zur Schmerzlinderung</li>
                             <li><strong>Interferenzstrom:</strong> Tiefenwirkende Schmerzbehandlung</li>
                             <li><strong>Ultraschalltherapie:</strong> Zur Geweberegenerierung</li>
                             <li><strong>Iontophorese:</strong> Medikamentöse Einbringung durch Strom</li>
@@ -118,12 +119,8 @@
                     </div>
                 </div>
 
-                <!-- Service 4: Sonstige Behandlungen -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <h3>Sonstige Behandlungen</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                <div class="service-card" data-service="other">
+                    <h3><span class="toggle-icon">+</span> Sonstige Behandlungen</h3>
                     <div class="service-content">
                         <ul>
                             <li><strong>Stoßwellentherapie:</strong> Hochenergetische Wellen zur Schmerzbehandlung</li>
@@ -136,16 +133,19 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2>Über Dr. Fadime Cenik</h2>
+                <p>Erfahrung, Fachkompetenz und Patientenfokus</p>
+            </div>
+
             <div class="about-grid">
-                <div class="about-content">
-                    <h2>Über Dr. Fadime Cenik</h2>
+                <div class="about-text">
                     <p>Dr. Fadime Cenik ist eine erfahrene Fachärztin für Physikalische Medizin und allgemeine Rehabilitation mit langjähriger Praxis in Wien.</p>
+                    
                     <h3>Qualifikationen</h3>
                     <ul>
                         <li>Fachärztin für Physikalische Medizin und Rehabilitation</li>
@@ -153,180 +153,192 @@
                         <li>Umfangreiche Erfahrung mit modernen Therapiemethoden</li>
                         <li>Kassenärztin mit Vertrag bei allen Krankenkassen</li>
                     </ul>
+
                     <h3>Behandlungsphilosophie</h3>
                     <p>Im Mittelpunkt der Behandlung steht der Patient. Durch eine Kombination aus modernen medizinischen Techniken und bewährten Therapiemethoden werden individuelle Behandlungspläne erstellt, die auf die spezifischen Bedürfnisse jedes Patienten abgestimmt sind.</p>
                 </div>
-                <div class="about-image">
-                    <div class="placeholder">👨‍⚕️</div>
+
+                <div class="doctor-profile">
+                    <div class="doctor-profile-image">👨‍⚕️</div>
+                    <h3>Dr. Fadime Cenik</h3>
+                    <p class="title">Fachärztin für Physikalische Medizin</p>
+                    <p>Kassenärztin – Alle Kassen</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2 class="section-title">Häufig gestellte Fragen</h2>
-            
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="section-header">
+                <h2>Häufig gestellte Fragen</h2>
+                <p>Antworten auf Ihre wichtigsten Fragen</p>
+            </div>
+
             <div class="faq-list">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Wie kann ich einen Termin vereinbaren?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Wie kann ich einen Termin vereinbaren?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Sie können einen Termin telefonisch unter +43 1 769 29 91 vereinbaren. Wir bieten flexible Terminzeiten an und versuchen, Sie zeitnah einzuplanen.</p>
+                        <p>Sie können einen Termin telefonisch unter <strong>+43 1 769 29 91</strong> vereinbaren. Wir bieten flexible Terminzeiten an und versuchen, Sie zeitnah einzuplanen.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Welche Krankenkassen werden akzeptiert?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Welche Krankenkassen werden akzeptiert?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Wir sind Kassenärztin und akzeptieren alle Krankenkassen: ÖGK, SVS, BVAEB und KFA. Bitte bringen Sie Ihre e-card zur Ordination mit.</p>
+                        <p>Wir sind Kassenärztin und akzeptieren alle Krankenkassen: <strong>ÖGK, SVS, BVAEB und KFA</strong>. Bitte bringen Sie Ihre e-card zur Ordination mit.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Was sollte ich zur ersten Untersuchung mitbringen?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Was sollte ich zur ersten Untersuchung mitbringen?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Bitte bringen Sie Ihre e-card, einen gültigen Lichtbildausweis und eventuell vorhandene medizinische Unterlagen (Röntgenbilder, Befunde) mit.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Wie lange dauert eine Behandlung?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Wie lange dauert eine Behandlung?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Eine typische Behandlung dauert 30-60 Minuten, je nach Art der Therapie und Ihrem Zustand. Die genaue Dauer wird bei der Terminvereinbarung besprochen.</p>
+                        <p>Eine typische Behandlung dauert <strong>30-60 Minuten</strong>, je nach Art der Therapie und Ihrem Zustand. Die genaue Dauer wird bei der Terminvereinbarung besprochen.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Benötige ich eine Überweisung?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Benötige ich eine Überweisung?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Für Kassenleistungen benötigen Sie in der Regel eine Überweisung von Ihrem Hausarzt oder Facharzt. Privatleistungen sind auch ohne Überweisung möglich.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Wie ist die Ordination erreichbar?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Wie ist die Ordination erreichbar?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Die Ordination befindet sich in der Kaiser-Ebersdorfer-Straße 328, 1110 Wien. Sie ist mit öffentlichen Verkehrsmitteln (U3, Straßenbahn) leicht erreichbar.</p>
+                        <p>Die Ordination befindet sich in der <strong>Kaiser-Ebersdorfer-Straße 328, 1110 Wien</strong>. Sie ist mit öffentlichen Verkehrsmitteln (U3, Straßenbahn) leicht erreichbar.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Welche Zahlungsarten werden akzeptiert?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Welche Zahlungsarten werden akzeptiert?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Wir akzeptieren Bargeld, Kartenzahlung und Banküberweisung. Bei Kassenleistungen erfolgt die Abrechnung direkt mit Ihrer Krankenkasse.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Bieten Sie Gutscheine an?</h3>
-                        <span class="toggle-btn">+</span>
-                    </div>
+                    <button class="faq-question" aria-expanded="false">
+                        Bieten Sie Gutscheine an?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Ja, wir bieten Gutscheine für Massagen und Therapiesitzungen an. Diese eignen sich hervorragend als Geschenk. Bitte kontaktieren Sie uns für weitere Informationen.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Kontakt & Öffnungszeiten</h2>
-            
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2>Kontakt & Öffnungszeiten</h2>
+                <p>Wir freuen uns auf Ihren Besuch</p>
+            </div>
+
             <div class="contact-grid">
                 <div class="contact-card">
-                    <h3>📞 Telefon</h3>
-                    <a href="tel:+4317692991" class="contact-link">+43 1 769 29 91</a>
+                    <div class="contact-icon">📞</div>
+                    <h3>Telefon</h3>
+                    <p><a href="tel:+4317692991">+43 1 769 29 91</a></p>
                 </div>
+
                 <div class="contact-card">
-                    <h3>📧 E-Mail</h3>
-                    <a href="mailto:ordination@drcenik.at" class="contact-link">ordination@drcenik.at</a>
+                    <div class="contact-icon">📧</div>
+                    <h3>E-Mail</h3>
+                    <p><a href="mailto:ordination@drcenik.at">ordination@drcenik.at</a></p>
                 </div>
+
                 <div class="contact-card">
-                    <h3>📍 Adresse</h3>
+                    <div class="contact-icon">📍</div>
+                    <h3>Adresse</h3>
                     <p>Kaiser-Ebersdorfer-Straße 328<br>1110 Wien</p>
                 </div>
             </div>
 
-            <div class="hours">
+            <div class="hours-section">
                 <h3>Ordinationszeiten</h3>
                 <table class="hours-table">
-                    <tr>
-                        <td>Montag</td>
-                        <td>15:00 - 18:00 Uhr</td>
-                    </tr>
-                    <tr>
-                        <td>Dienstag</td>
-                        <td>08:00 - 11:00 Uhr</td>
-                    </tr>
-                    <tr>
-                        <td>Mittwoch</td>
-                        <td>15:00 - 18:00 Uhr</td>
-                    </tr>
-                    <tr>
-                        <td>Donnerstag</td>
-                        <td>08:00 - 11:00 Uhr</td>
-                    </tr>
-                    <tr>
-                        <td>Freitag</td>
-                        <td>Nach Vereinbarung</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Zeit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Montag</td>
+                            <td>15:00 - 18:00 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Dienstag</td>
+                            <td>08:00 - 11:00 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Mittwoch</td>
+                            <td>15:00 - 18:00 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Donnerstag</td>
+                            <td>08:00 - 11:00 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Freitag</td>
+                            <td>Nach Vereinbarung</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
-            <div class="cta-box">
-                <h3>Termin vereinbaren</h3>
-                <p>Kontaktieren Sie uns telefonisch oder per E-Mail, um einen Termin zu vereinbaren.</p>
-                <a href="tel:+4317692991" class="btn btn-large">Jetzt anrufen</a>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="tel:+4317692991" class="btn btn-primary">Jetzt anrufen</a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
+    <footer>
+        <div class="footer-inner">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>Ordination</h4>
-                    <p>Dr. Fadime Cenik<br>Kassenärztin für Physikalische Medizin<br>Kaiser-Ebersdorfer-Straße 328<br>1110 Wien</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Kontakt</h4>
-                    <p>Telefon: +43 1 769 29 91<br>E-Mail: ordination@drcenik.at</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Links</h4>
+                    <h4>Navigation</h4>
                     <ul>
                         <li><a href="#home">Startseite</a></li>
                         <li><a href="#services">Leistungen</a></li>
                         <li><a href="#about">Über uns</a></li>
                         <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
                     <h4>Rechtliches</h4>
                     <ul>
@@ -335,13 +347,33 @@
                         <li><a href="/agb.html">AGB</a></li>
                     </ul>
                 </div>
+
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="tel:+4317692991">+43 1 769 29 91</a></li>
+                        <li><a href="mailto:ordination@drcenik.at">ordination@drcenik.at</a></li>
+                        <li>Kaiser-Ebersdorfer-Str. 328<br>1110 Wien</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Sprachen</h4>
+                    <ul>
+                        <li><a href="/de/">Deutsch</a></li>
+                        <li><a href="/tr/">Türkçe</a></li>
+                        <li><a href="/en/">English</a></li>
+                    </ul>
+                </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 Dr. Fadime Cenik. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2024 Dr. Fadime Cenik. Alle Rechte vorbehalten. | Kassenärztin für Physikalische Medizin & Rehabilitation Wien</p>
             </div>
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <!-- JavaScript -->
+    <script src="/js/main.js" defer></script>
 </body>
 </html>
