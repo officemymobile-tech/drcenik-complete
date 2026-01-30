@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initHeaderScroll();
     initHamburgerMenu();
+    initBookingWizard();
     updateAriaAttributes();
 });
 
@@ -243,6 +244,141 @@ document.addEventListener('keydown', function(e) {
         }
     }
 });
+
+// ============================================
+// 3-Step Booking Wizard
+// ============================================
+function initBookingWizard() {
+    const form = document.getElementById('booking-form');
+    if (!form) return;
+    
+    const nextButtons = form.querySelectorAll('.next-step');
+    const prevButtons = form.querySelectorAll('.prev-step');
+    
+    nextButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const currentStep = form.querySelector('.form-step.active');
+            const currentStepNum = parseInt(currentStep.getAttribute('data-step'));
+            
+            if (!validateStep(currentStep)) {
+                showToast('Please fill in all required fields', 'error');
+                return;
+            }
+            
+            if (currentStepNum === 2) {
+                updateConfirmationSummary();
+            }
+            
+            if (currentStepNum < 3) {
+                currentStep.classList.remove('active');
+                const nextStep = form.querySelector(`.form-step[data-step="${currentStepNum + 1}"]`);
+                nextStep.classList.add('active');
+                updateStepIndicator(currentStepNum + 1);
+            }
+        });
+    });
+    
+    prevButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const currentStep = form.querySelector('.form-step.active');
+            const currentStepNum = parseInt(currentStep.getAttribute('data-step'));
+            
+            if (currentStepNum > 1) {
+                currentStep.classList.remove('active');
+                const prevStep = form.querySelector(`.form-step[data-step="${currentStepNum - 1}"]`);
+                prevStep.classList.add('active');
+                updateStepIndicator(currentStepNum - 1);
+            }
+        });
+    });
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            service: document.querySelector('input[name="service"]:checked')?.value
+        };
+        console.log('Booking request:', formData);
+        showToast('Thank you! We will contact you shortly to confirm your appointment.', 'success');
+        setTimeout(() => {
+            form.reset();
+            form.querySelector('.form-step.active').classList.remove('active');
+            form.querySelector('.form-step[data-step="1"]').classList.add('active');
+            updateStepIndicator(1);
+        }, 2000);
+    });
+}
+
+function validateStep(step) {
+    const inputs = step.querySelectorAll('input[required], textarea[required]');
+    let isValid = true;
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            isValid = false;
+            input.style.borderColor = '#ff6b6b';
+        } else {
+            input.style.borderColor = '';
+        }
+    });
+    return isValid;
+}
+
+function updateStepIndicator(stepNum) {
+    const stepNumbers = document.querySelectorAll('.step-number');
+    stepNumbers.forEach((step, index) => {
+        if (index + 1 <= stepNum) {
+            step.classList.add('active');
+        } else {
+            step.classList.remove('active');
+        }
+    });
+}
+
+function updateConfirmationSummary() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.querySelector('input[name="service"]:checked')?.value || '';
+    
+    document.getElementById('confirm-name').textContent = name;
+    document.getElementById('confirm-email').textContent = email;
+    document.getElementById('confirm-phone').textContent = phone;
+    
+    const serviceLabels = {
+        'massage': 'Massage Therapy',
+        'movement': 'Movement Therapy',
+        'electro': 'Electrotherapy',
+        'consultation': 'Consultation & Examination'
+    };
+    document.getElementById('confirm-service').textContent = serviceLabels[service] || service;
+}
+
+function showToast(message, type = 'info') {
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.textContent = message;
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        padding: 1rem 1.5rem;
+        background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+        color: white;
+        border-radius: 2px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+        animation: slideInUp 0.3s ease;
+    `;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        toast.style.animation = 'slideOutDown 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
 
 // ============================================
 // Initialization complete
